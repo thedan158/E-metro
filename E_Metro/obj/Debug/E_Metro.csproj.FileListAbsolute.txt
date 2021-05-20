@@ -29,3 +29,36 @@ C:\Users\theda\Downloads\QuanLyKho\E_Metro\obj\Debug\E_Metro.csproj.CoreCompileI
 C:\Users\theda\Downloads\QuanLyKho\E_Metro\obj\Debug\E_Metro.csproj.CopyComplete
 C:\Users\theda\Downloads\QuanLyKho\E_Metro\obj\Debug\E_Metro.exe
 C:\Users\theda\Downloads\QuanLyKho\E_Metro\obj\Debug\E_Metro.pdb
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\E_Metro.exe.config
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\E_Metro.exe
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\E_Metro.pdb
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\MaterialDesignColors.dll
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\System.Windows.Interactivity.dll
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\bin\Debug\System.Windows.Interactivity.xml
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.csprojAssemblyReference.cache
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\LoginWindow.g.cs
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\MainWindow.g.cs
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\UserControlKteam\ControlBarUC.g.cs
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\App.g.cs
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro_MarkupCompile.cache
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro_MarkupCompile.lref
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\App.baml
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\LoginWindow.baml
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\MainWindow.baml
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\ResourceXAML\MainResource.baml
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\UserControlKteam\ControlBarUC.baml
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.g.resources
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.Properties.Resources.resources
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.csproj.GenerateResource.cache
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.csproj.CoreCompileInputs.cache
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.csproj.CopyComplete
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.exe
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.pdb
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\SearchWindow.g.cs
+D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\SearchWindow.baml

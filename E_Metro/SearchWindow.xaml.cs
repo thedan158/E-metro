@@ -11,21 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Windows.Navigation;
-
 
 namespace E_Metro
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Interaction logic for SearchWindow.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class SearchWindow : Window
     {
-        public LoginWindow()
+        public SearchWindow()
         {
             InitializeComponent();
         }
-
-        
     }
 }

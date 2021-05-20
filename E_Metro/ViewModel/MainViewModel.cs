@@ -12,6 +12,7 @@ namespace E_Metro.ViewModel
     {
         public bool Isloaded = false;
         public ICommand LoadedWindowCommand { get; set; }
+        public ICommand LoadSearchCommand { get; set; }
 
         // mọi thứ xử lý sẽ nằm trong này
         public MainViewModel()
@@ -21,7 +22,9 @@ namespace E_Metro.ViewModel
                 LoginWindow loginWindow = new LoginWindow();
                 loginWindow.ShowDialog();
             }
-              );           
+              );
+            //load window khi nhấn 1 nút nào đấy 
+            LoadSearchCommand = new RelayCommand<object>((p) => { return true; }, (p) => { SearchWindow wd = new SearchWindow(); wd.ShowDialog(); });
         }
     }
 }

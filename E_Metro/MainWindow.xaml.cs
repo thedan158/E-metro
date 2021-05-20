@@ -24,6 +24,22 @@ namespace E_Metro
         public MainWindow()
         {
             InitializeComponent();
+            List<Train> items = new List<Train>();
+            items.Add(new Train() { money = 20000 });
+            items.Add(new Train() { money = 50000 });
+            items.Add(new Train() { money = 120000 });
+            items.Add(new Train() { money = 200000 });
+            items.Add(new Train() { money = 250000 });
+            items.Add(new Train() { money = 30000 });
+
+            
+
         }
+            
+        
+    }
+    public class Train
+    {
+        public int money { get; set; }
     }
 }
