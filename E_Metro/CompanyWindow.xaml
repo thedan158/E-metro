@@ -1,0 +1,237 @@
+﻿<Window x:Class="E_Metro.CompanyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:E_Metro"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        
+        xmlns:uc="clr-namespace:E_Metro.UserControlKteam"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="CompanyWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="541*"/>
+                <ColumnDefinition Width="459*"/>
+            </Grid.ColumnDefinitions>
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=CompanyWindow}" Grid.ColumnSpan="2"></uc:ControlBarUC>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--Menu tu chon-->
+            <Grid Grid.Row="0">
+
+                <Grid HorizontalAlignment="Stretch"  Background="Transparent" VerticalAlignment="Stretch">
+                    <Grid.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="2 4 2 4"></Setter>
+                            <Setter Property="Width" Value="40"></Setter>
+                        </Style>
+                    </Grid.Resources>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" ToolTip="Thêm mới" Height="60" Width="160" Margin="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <TextBlock 
+                                    Text="Thêm mới" 
+                                    HorizontalAlignment="Center" >
+                                </TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <materialDesign:PackIcon Kind="Plus" 
+                                 HorizontalAlignment="Center" />
+                            </Grid>
+                        </Grid>
+
+                    </Button>
+                    <Button Grid.Column="1" ToolTip="Xóa" Height="60" Width="160" Margin="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <TextBlock 
+                                    Text="Xóa" 
+                                    HorizontalAlignment="Center" >
+                                </TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <materialDesign:PackIcon Kind="Delete" 
+                                 HorizontalAlignment="Center" />
+                            </Grid>
+                        </Grid>
+
+                    </Button>
+                    <Button Grid.Column="2" Click="Search_Click" ToolTip="Tra cứu" Height="60" Width="160" Margin="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <TextBlock 
+                                    Text="Tra cứu" 
+                                    HorizontalAlignment="Center" >
+                                </TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <materialDesign:PackIcon Kind="Magnify" 
+                                 HorizontalAlignment="Center" />
+                            </Grid>
+                        </Grid>
+
+                    </Button>
+
+                </Grid>
+            </Grid>
+
+            <!--Giao dien-->
+            <Grid Grid.Row="1" Margin="15">
+
+                <ListView
+                    x:Name="ThingListView">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn
+                                Header="MÃ TUYẾN">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ComboBox
+                                          Width="100">
+                                            <ComboBoxItem
+                                            Content="Test" />
+                                            <ComboBoxItem
+                                            Content="Test2" />
+                                            <ComboBoxItem
+                                            Content="Test3" />
+                                        </ComboBox>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="TÊN TUYẾN">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ComboBox
+                                          Width="100">
+                                            <ComboBoxItem
+                                            Content="Test" />
+                                            <ComboBoxItem
+                                            Content="Test2" />
+                                            <ComboBoxItem
+                                            Content="Test3" />
+                                        </ComboBox>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="GA ĐẾN">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ComboBox
+                                          Width="100">
+                                            <ComboBoxItem
+                                            Content="Test" />
+                                            <ComboBoxItem
+                                            Content="Test2" />
+                                            <ComboBoxItem
+                                            Content="Test3" />
+                                        </ComboBox>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="GA ĐI">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ComboBox
+                                          Width="100">
+                                            <ComboBoxItem
+                                            Content="Test" />
+                                            <ComboBoxItem
+                                            Content="Test2" />
+                                            <ComboBoxItem
+                                            Content="Test3" />
+                                        </ComboBox>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="LOAI">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ComboBox
+                                          Width="100">
+                                            <ComboBoxItem
+                                            Content="Test" />
+                                            <ComboBoxItem
+                                            Content="Test2" />
+                                            <ComboBoxItem
+                                            Content="Test3" />
+                                        </ComboBox>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="GIÁ">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ComboBox
+                                          Width="100">
+                                            <ComboBoxItem
+                                            Content="Test" />
+                                            <ComboBoxItem
+                                            Content="Test2" />
+                                            <ComboBoxItem
+                                            Content="Test3" />
+                                        </ComboBox>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>
