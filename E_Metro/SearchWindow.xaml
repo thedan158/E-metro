@@ -121,12 +121,12 @@
                         <GridView>
                             <GridViewColumn
                                 Header="MÃ TUYẾN"
-                                 DisplayMemberBinding="{Binding StationCode}">
+                                 DisplayMemberBinding="{Binding Code}">
                             </GridViewColumn>
 
                             <GridViewColumn
                                 Header="TÊN TUYẾN"
-                                DisplayMemberBinding="{Binding StationName}">
+                                DisplayMemberBinding="{Binding Name}">
                             </GridViewColumn>
 
                             <GridViewColumn

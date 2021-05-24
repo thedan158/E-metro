@@ -62,3 +62,38 @@ D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.
 D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.pdb
 D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\SearchWindow.g.cs
 D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\SearchWindow.baml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\E_Metro.exe.config
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\E_Metro.exe
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\E_Metro.pdb
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\MaterialDesignColors.dll
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\AddWindow.g.cs
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\LoginWindow.g.cs
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\SearchWindow.g.cs
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\UserControlKteam\ControlBarUC.g.cs
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\App.g.cs
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro_MarkupCompile.cache
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro_MarkupCompile.lref
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\App.baml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\LoginWindow.baml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\MainWindow.baml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\ResourceXAML\MainResource.baml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\SearchWindow.baml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\UserControlKteam\ControlBarUC.baml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\AddWindow.baml
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro.g.resources
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro.Properties.Resources.resources
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro.csproj.CopyComplete
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro.exe
+C:\Users\Admin\source\repos\giaodienbranch\E_Metro\obj\Debug\E_Metro.pdb

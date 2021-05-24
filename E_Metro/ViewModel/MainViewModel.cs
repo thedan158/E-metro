@@ -14,6 +14,8 @@ namespace E_Metro.ViewModel
         public ICommand LoadedWindowCommand { get; set; }
         public ICommand LoadSearchCommand { get; set; }
 
+        public ICommand LoadAddCommand { get; set; }
+
         // mọi thứ xử lý sẽ nằm trong này
         public MainViewModel()
         {
@@ -25,6 +27,7 @@ namespace E_Metro.ViewModel
               );
             //load window khi nhấn 1 nút nào đấy 
             LoadSearchCommand = new RelayCommand<object>((p) => { return true; }, (p) => { SearchWindow wd = new SearchWindow(); wd.ShowDialog(); });
+            LoadAddCommand = new RelayCommand<object>((p) => { return true; }, (p) => { AddWindow wd = new AddWindow(); wd.ShowDialog(); });
         }
     }
 }

@@ -44,11 +44,12 @@
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="133*"></RowDefinition>
+                <RowDefinition Height="250*"/>
             </Grid.RowDefinitions>
 
             <!--Menu tu chon-->
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" Margin="0,0,-0.2,0">
 
                 <Grid HorizontalAlignment="Stretch"  Background="Transparent" VerticalAlignment="Stretch">
                     <Grid.Resources>
@@ -64,7 +65,7 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Button Grid.Column="0" ToolTip="Thêm mới" Height="60" Width="160" Margin="10">
+                    <Button Grid.Column="0" Command="{Binding LoadAddCommand}" ToolTip="Thêm mới" Height="60" Width="160" Margin="10">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -126,10 +127,10 @@
             </Grid>
 
             <!--Giao dien-->
-            <Grid Grid.Row="1" Margin="15">
+            <Grid Grid.Row="1" Margin="15,15,14.8,15.2" Grid.RowSpan="2">
 
                 <ListView
-                    x:Name="ThingListView">
+                    x:Name="ThingListView" SelectionChanged="ThingListView_SelectionChanged">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn
@@ -148,19 +149,19 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            
+
                             <GridViewColumn
                                 Header="TÊN TUYẾN">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <ComboBox
                                           Width="100">
-                                           <ComboBoxItem
+                                            <ComboBoxItem
                                             Content="Test" />
-                                           <ComboBoxItem
+                                            <ComboBoxItem
                                             Content="Test2" />
-                                           <ComboBoxItem
-                                            Content="Test3" />  
+                                            <ComboBoxItem
+                                            Content="Test3" />
                                         </ComboBox>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
