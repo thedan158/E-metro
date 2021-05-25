@@ -19,7 +19,7 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Title="CompanyWindow" Height="450" Width="800">
+        Title="CompanyWindow" Height="450" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -53,10 +53,11 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
+                        
+                        
                     </Grid.ColumnDefinitions>
 
-                    <Button Grid.Column="0" ToolTip="Thêm mới" Height="60" Width="160" Margin="10">
+                    <Button Grid.Column="0" Click="Add_Click" Height="60" Width="160" Margin="10">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -75,26 +76,8 @@
                         </Grid>
 
                     </Button>
-                    <Button Grid.Column="1" ToolTip="Xóa" Height="60" Width="160" Margin="10">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <TextBlock 
-                                    Text="Xóa" 
-                                    HorizontalAlignment="Center" >
-                                </TextBlock>
-                            </Grid>
-                            <Grid Grid.Row="1">
-                                <materialDesign:PackIcon Kind="Delete" 
-                                 HorizontalAlignment="Center" />
-                            </Grid>
-                        </Grid>
-
-                    </Button>
-                    <Button Grid.Column="2" Click="Search_Click" ToolTip="Tra cứu" Height="60" Width="160" Margin="10">
+                    
+                    <Button Grid.Column="1" Click="Search_Click"  Height="60" Width="160" Margin="10">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -113,6 +96,8 @@
                         </Grid>
 
                     </Button>
+
+                    
 
                 </Grid>
             </Grid>

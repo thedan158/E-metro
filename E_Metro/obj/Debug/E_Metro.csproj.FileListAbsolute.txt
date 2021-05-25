@@ -99,3 +99,5 @@ D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.cs
 D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.csproj.CopyComplete
 D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.exe
 D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.pdb
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindow.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindow.baml

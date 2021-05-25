@@ -51,7 +51,7 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-
+                    
 
                 </Grid.ColumnDefinitions>
 
@@ -148,6 +148,19 @@
                                 Header="GIÁ"
                                 DisplayMemberBinding="{Binding Price}">
                                 
+                            </GridViewColumn>
+
+                            <GridViewColumn>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button>
+                                            <Grid>
+                                                <materialDesign:PackIcon Kind="Delete" 
+                                                HorizontalAlignment="Center" />
+                                            </Grid>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
                         </GridView>
