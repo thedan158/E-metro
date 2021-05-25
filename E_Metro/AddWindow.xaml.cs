@@ -15,28 +15,13 @@ using System.Windows.Shapes;
 namespace E_Metro
 {
     /// <summary>
-    /// Interaction logic for CompanyWindow.xaml
+    /// Interaction logic for AddWindow.xaml
     /// </summary>
-    public partial class CompanyWindow : Window
+    public partial class AddWindow : Window
     {
-        public CompanyWindow()
+        public AddWindow()
         {
             InitializeComponent();
         }
-
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-            SearchWindow wd = new SearchWindow();
-            wd.ShowDialog();
-        }
-
-       
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-            AddWindow wd = new AddWindow();
-            wd.ShowDialog();
-        }
-
-
     }
 }
