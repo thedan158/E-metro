@@ -62,3 +62,91 @@ D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.
 D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\E_Metro.pdb
 D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\SearchWindow.g.cs
 D:\000-Work to do\Software technology\E-Metro\E-metro\E_Metro\obj\Debug\SearchWindow.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\E_Metro.exe.config
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\E_Metro.exe
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\E_Metro.pdb
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\MaterialDesignColors.dll
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\System.Windows.Interactivity.dll
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\bin\Debug\System.Windows.Interactivity.xml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.csprojAssemblyReference.cache
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\Banve.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\CompanyWindow.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\LoginWindow.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\MainWindow.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\SearchWindow.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\UserControlKteam\ControlBarUC.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\App.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro_MarkupCompile.cache
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro_MarkupCompile.lref
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\App.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\Banve.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\CompanyWindow.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\LoginWindow.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\MainWindow.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\ResourceXAML\MainResource.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\SearchWindow.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\UserControlKteam\ControlBarUC.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.g.resources
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.Properties.Resources.resources
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.csproj.GenerateResource.cache
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.csproj.CoreCompileInputs.cache
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.csproj.CopyComplete
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.exe
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.pdb
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindow.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindow.baml
+D:\E-metro-master\E_Metro\bin\Debug\E_Metro.exe.config
+D:\E-metro-master\E_Metro\bin\Debug\E_Metro.exe
+D:\E-metro-master\E_Metro\bin\Debug\E_Metro.pdb
+D:\E-metro-master\E_Metro\bin\Debug\MaterialDesignColors.dll
+D:\E-metro-master\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\E-metro-master\E_Metro\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\E-metro-master\E_Metro\bin\Debug\System.Windows.Interactivity.dll
+D:\E-metro-master\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\E-metro-master\E_Metro\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\E-metro-master\E_Metro\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\E-metro-master\E_Metro\bin\Debug\System.Windows.Interactivity.xml
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro.csprojAssemblyReference.cache
+D:\E-metro-master\E_Metro\obj\Debug\AddWindow.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\Banve.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\CompanyWindow.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\LoginWindow.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\MainWindow.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\SearchWindow.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\UserControlKteam\ControlBarUC.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\App.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro_MarkupCompile.cache
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro_MarkupCompile.lref
+D:\E-metro-master\E_Metro\obj\Debug\App.baml
+D:\E-metro-master\E_Metro\obj\Debug\AddWindow.baml
+D:\E-metro-master\E_Metro\obj\Debug\Banve.baml
+D:\E-metro-master\E_Metro\obj\Debug\CompanyWindow.baml
+D:\E-metro-master\E_Metro\obj\Debug\LoginWindow.baml
+D:\E-metro-master\E_Metro\obj\Debug\MainWindow.baml
+D:\E-metro-master\E_Metro\obj\Debug\ResourceXAML\MainResource.baml
+D:\E-metro-master\E_Metro\obj\Debug\SearchWindow.baml
+D:\E-metro-master\E_Metro\obj\Debug\UserControlKteam\ControlBarUC.baml
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro.g.resources
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro.Properties.Resources.resources
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro.csproj.GenerateResource.cache
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro.csproj.CoreCompileInputs.cache
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro.csproj.CopyComplete
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro.exe
+D:\E-metro-master\E_Metro\obj\Debug\E_Metro.pdb
+D:\E-metro-master\E_Metro\obj\Debug\TraffucWindow.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\TraffucWindow.baml
+D:\E-metro-master\E_Metro\obj\Debug\AddWindowTraffic.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\SearchWindowTraffic.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\AddWindowTraffic.baml
+D:\E-metro-master\E_Metro\obj\Debug\SearchWindowTraffic.baml
+D:\E-metro-master\E_Metro\obj\Debug\AddWindowTraffic1.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\SearchWindowTraffic1.g.cs
+D:\E-metro-master\E_Metro\obj\Debug\AddWindowTraffic1.baml
+D:\E-metro-master\E_Metro\obj\Debug\SearchWindowTraffic1.baml

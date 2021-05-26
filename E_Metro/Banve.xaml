@@ -35,10 +35,10 @@
                             <Label>Số điện thoại</Label>
                         </StackPanel>
                         <StackPanel>
-                            <TextBox x:Name="tbTen" Height="25" Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox x:Name="tbCMND" Height="25"  Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox x:Name="tbMaKH" Height="25" Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox x:Name="tbSDT" Height="25" Width="150" IsReadOnly="True"></TextBox>
+                            <TextBox  Height="25" Width="150" IsReadOnly="True"></TextBox>
+                            <TextBox  Height="25"  Width="150" IsReadOnly="True"></TextBox>
+                            <TextBox  Height="25" Width="150" IsReadOnly="True"></TextBox>
+                            <TextBox  Height="25" Width="150" IsReadOnly="True"></TextBox>
                         </StackPanel>
                     </WrapPanel>
                 </GroupBox>

@@ -1,4 +1,4 @@
-﻿<Window x:Class="E_Metro.SearchWindow"
+﻿<Window x:Class="E_Metro.SearchWindowTraffic"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -50,60 +50,51 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    
+
 
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column="0">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Mã chuyến"
-                        Text="{Binding StationCodeSearch}"
-                        Margin="8 0 0 0">
-                    </TextBox>
-                </Grid>
-
                 <Grid Grid.Column="1">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Tên chuyến"
-                        Text="{Binding StationNameSearch}"
+                        materialDesign:HintAssist.Hint="TÊN CÔNG TY"
+                        Text="{Binding StationCodeSearch}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="2">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Ga đến"
-                        Text="{Binding AStationSearch}"
+                        materialDesign:HintAssist.Hint="WEBSITE"
+                        Text="{Binding StationNameSearch}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="3">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Ga đi"
-                        Text="{Binding LStationSearch}"
+                        materialDesign:HintAssist.Hint="TRỤ SỞ"
+                        Text="{Binding AStationSearch}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="4">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Loại"
-                        Text="{Binding KindSearch}"
+                        materialDesign:HintAssist.Hint="SĐT"
+                        Text="{Binding LStationSearch}"
+                        Margin="8 0 0 0">
+                    </TextBox>
+                </Grid>
+
+                <Grid Grid.Column="0">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Mã Công Ty"
+                        Text="{Binding LStationSearch}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="5">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Giá"
-                        Text="{Binding PriceSearch}"
-                        Margin="8 0 0 0">
-                    </TextBox>
-                </Grid>
-
-                <Grid Grid.Column="6">
                     <Button>
                         <Grid>
                             <materialDesign:PackIcon Kind="Magnify" 
@@ -119,36 +110,36 @@
                     x:Name="ThingListView">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn
-                                Header="MÃ TUYẾN"
-                                 DisplayMemberBinding="{Binding StationCode}">
-                            </GridViewColumn>
 
                             <GridViewColumn
-                                Header="TÊN TUYẾN"
-                                DisplayMemberBinding="{Binding StationName}">
-                            </GridViewColumn>
-
-                            <GridViewColumn
-                                Header="GA ĐẾN"
-                                DisplayMemberBinding="{Binding AStation}">
-                            </GridViewColumn>
-
-                            <GridViewColumn
-                                Header="GA ĐI"
+                                Header="MÃ CÔNG TY"
                                 DisplayMemberBinding="{Binding LStation}">
                             </GridViewColumn>
 
                             <GridViewColumn
-                                Header="LOAI"
-                                DisplayMemberBinding="{Binding Kind}">
+                                Header="TÊN CÔNG TY"
+                                 DisplayMemberBinding="{Binding StationCode}">
                             </GridViewColumn>
 
                             <GridViewColumn
-                                Header="GIÁ"
-                                DisplayMemberBinding="{Binding Price}">
-                                
+                                Header="ĐC WEBSITE"
+                                DisplayMemberBinding="{Binding StationName}">
                             </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="ĐC TRỤ SỞ CHÍNH"
+                                DisplayMemberBinding="{Binding AStation}">
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="SĐT"
+                                DisplayMemberBinding="{Binding LStation}">
+                            </GridViewColumn>
+
+                            
+
+
+
 
                             <GridViewColumn>
                                 <GridViewColumn.CellTemplate>
