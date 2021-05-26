@@ -14,6 +14,7 @@ namespace E_Metro.ViewModel
         public ICommand LoadedWindowCommand { get; set; }
         public ICommand TicketWindowCommand { get; set; }
         public ICommand CompanyWindowCommand { get; set; }
+        public ICommand TrafficWindowCommand { get; set; }
 
         // mọi thứ xử lý sẽ nằm trong này
         public MainViewModel()
@@ -27,6 +28,7 @@ namespace E_Metro.ViewModel
             //load window khi nhấn 1 nút nào đấy 
             TicketWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => { Banve wd = new Banve(); wd.ShowDialog(); });
             CompanyWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CompanyWindow wd = new CompanyWindow(); wd.ShowDialog(); });
+            TrafficWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => { TrafficWindow wd = new TrafficWindow(); wd.ShowDialog(); });
         }
     }
 }

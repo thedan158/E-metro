@@ -1,0 +1,164 @@
+﻿<Window x:Class="E_Metro.SearchWindowTraffic1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:E_Metro"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        
+        xmlns:uc="clr-namespace:E_Metro.UserControlKteam"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        
+        Name="searchWindow"
+        
+        Title="SearchWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=mainWindow}" ></uc:ControlBarUC>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="TÊN CÔNG TY"
+                        Text="{Binding StationCodeSearch}"
+                        Margin="8 0 0 0">
+                    </TextBox>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="WEBSITE"
+                        Text="{Binding StationNameSearch}"
+                        Margin="8 0 0 0">
+                    </TextBox>
+                </Grid>
+
+                <Grid Grid.Column="3">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="TRỤ SỞ"
+                        Text="{Binding AStationSearch}"
+                        Margin="8 0 0 0">
+                    </TextBox>
+                </Grid>
+
+                <Grid Grid.Column="4">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="SĐT"
+                        Text="{Binding LStationSearch}"
+                        Margin="8 0 0 0">
+                    </TextBox>
+                </Grid>
+
+                <Grid Grid.Column="0">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Mã Công Ty"
+                        Text="{Binding LStationSearch}"
+                        Margin="8 0 0 0">
+                    </TextBox>
+                </Grid>
+
+                <Grid Grid.Column="5">
+                    <Button>
+                        <Grid>
+                            <materialDesign:PackIcon Kind="Magnify" 
+                                 HorizontalAlignment="Center" />
+                        </Grid>
+                    </Button>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <ListView
+                    x:Name="ThingListView">
+                    <ListView.View>
+                        <GridView>
+
+                            <GridViewColumn
+                                Header="MÃ CÔNG TY"
+                                DisplayMemberBinding="{Binding LStation}">
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="TÊN CÔNG TY"
+                                 DisplayMemberBinding="{Binding StationCode}">
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="ĐC WEBSITE"
+                                DisplayMemberBinding="{Binding StationName}">
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="ĐC TRỤ SỞ CHÍNH"
+                                DisplayMemberBinding="{Binding AStation}">
+                            </GridViewColumn>
+
+                            <GridViewColumn
+                                Header="SĐT"
+                                DisplayMemberBinding="{Binding LStation}">
+                            </GridViewColumn>
+
+
+
+
+
+
+                            <GridViewColumn>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button>
+                                            <Grid>
+                                                <materialDesign:PackIcon Kind="Delete" 
+                                                HorizontalAlignment="Center" />
+                                            </Grid>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>

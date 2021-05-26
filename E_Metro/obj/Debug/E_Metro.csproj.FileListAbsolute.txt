@@ -101,3 +101,13 @@ D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.ex
 D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\E_Metro.pdb
 D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindow.g.cs
 D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindow.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindowTraffic1.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindowTraffic2.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\SearchWindowTraffic1.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\SearchWindowTraffic2.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\TrafficWindow.g.cs
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindowTraffic1.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\AddWindowTraffic2.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\SearchWindowTraffic1.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\SearchWindowTraffic2.baml
+D:\000-Work to do\Software technology\Clone\E-metro\E_Metro\obj\Debug\TrafficWindow.baml
