@@ -176,24 +176,7 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-
-                            <GridViewColumn
-                                Header="LOAI">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <ComboBox
-                                          Width="100">
-                                            <ComboBoxItem
-                                            Content="Test" />
-                                            <ComboBoxItem
-                                            Content="Test2" />
-                                            <ComboBoxItem
-                                            Content="Test3" />
-                                        </ComboBox>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-
+                          
                             <GridViewColumn
                                 Header="GIÁ">
                                 <GridViewColumn.CellTemplate>
