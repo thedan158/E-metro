@@ -1,0 +1,128 @@
+USE [EMetro]
+GO
+/****** Object:  Table [dbo].[Company]    Script Date: 5/28/2021 1:51:30 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Company](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[DisplayName] [nvarchar](max) NULL,
+	[Website] [nvarchar](max) NULL,
+	[Address] [nvarchar](100) NULL,
+	[Phone] [varchar](30) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[RailWay]    Script Date: 5/28/2021 1:51:30 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[RailWay](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[DisplayName] [nvarchar](max) NULL,
+	[DepartureID] [int] NULL,
+	[DestinationID] [int] NULL,
+	[Price] [money] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Station]    Script Date: 5/28/2021 1:51:30 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Station](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[DisplayName] [nvarchar](max) NULL,
+	[Address] [nvarchar](100) NULL,
+	[Status] [nvarchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Ticket]    Script Date: 5/28/2021 1:51:30 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Ticket](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[RailwayID] [int] NULL,
+	[DepartTime] [timestamp] NOT NULL,
+	[IdType] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TicketType]    Script Date: 5/28/2021 1:51:30 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TicketType](
+	[Id] [int] NOT NULL,
+	[DisplayName] [nvarchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[UserRole]    Script Date: 5/28/2021 1:51:30 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserRole](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[DisplayName] [nvarchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Users]    Script Date: 5/28/2021 1:51:30 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Users](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[DisplayName] [nvarchar](max) NULL,
+	[Username] [nvarchar](100) NULL,
+	[Password] [nvarchar](max) NULL,
+	[IdRole] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[RailWay]  WITH CHECK ADD FOREIGN KEY([DepartureID])
+REFERENCES [dbo].[Station] ([Id])
+GO
+ALTER TABLE [dbo].[RailWay]  WITH CHECK ADD FOREIGN KEY([DestinationID])
+REFERENCES [dbo].[Station] ([Id])
+GO
+ALTER TABLE [dbo].[Ticket]  WITH CHECK ADD FOREIGN KEY([IdType])
+REFERENCES [dbo].[TicketType] ([Id])
+GO
+ALTER TABLE [dbo].[Ticket]  WITH CHECK ADD FOREIGN KEY([RailwayID])
+REFERENCES [dbo].[RailWay] ([Id])
+GO
+ALTER TABLE [dbo].[Users]  WITH CHECK ADD FOREIGN KEY([IdRole])
+REFERENCES [dbo].[UserRole] ([Id])
+GO
