@@ -3,4 +3,5 @@
                     xmlns:viewmodel="clr-namespace:E_Metro.ViewModel"
                     xmlns:local="clr-namespace:E_Metro.ResourceXAML">
     <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
+    <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
 </ResourceDictionary>
