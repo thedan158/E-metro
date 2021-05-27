@@ -65,19 +65,7 @@
                 </ItemsPanelTemplate>
             </ComboBox.ItemsPanel>
         </ComboBox>
-        <ComboBox
-  materialDesign:HintAssist.Hint="Loại"
-  materialDesign:HintAssist.FloatingScale="1.5"
-  materialDesign:HintAssist.FloatingOffset="0, -24"
-  MinWidth="72"
-  ItemsSource="{Binding LongListToTestComboVirtualization}"
-  Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="292,149.2,37.6,74" Grid.Row="1" RenderTransformOrigin="0.463,2.536">
-            <ComboBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel />
-                </ItemsPanelTemplate>
-            </ComboBox.ItemsPanel>
-        </ComboBox>
+        
         <Button
   Style="{StaticResource MaterialDesignRaisedLightButton}"
  

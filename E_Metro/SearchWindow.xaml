@@ -138,12 +138,7 @@
                                 Header="GA ĐI"
                                 DisplayMemberBinding="{Binding LStation}">
                             </GridViewColumn>
-
-                            <GridViewColumn
-                                Header="LOAI"
-                                DisplayMemberBinding="{Binding Kind}">
-                            </GridViewColumn>
-
+                            
                             <GridViewColumn
                                 Header="GIÁ"
                                 DisplayMemberBinding="{Binding Price}">
