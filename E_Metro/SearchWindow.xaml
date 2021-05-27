@@ -50,7 +50,7 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    
                     
 
                 </Grid.ColumnDefinitions>
@@ -89,21 +89,13 @@
 
                 <Grid Grid.Column="4">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Loại"
-                        Text="{Binding KindSearch}"
-                        Margin="8 0 0 0">
-                    </TextBox>
-                </Grid>
-
-                <Grid Grid.Column="5">
-                    <TextBox
                         materialDesign:HintAssist.Hint="Giá"
                         Text="{Binding PriceSearch}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
-                <Grid Grid.Column="6">
+                <Grid Grid.Column="5">
                     <Button>
                         <Grid>
                             <materialDesign:PackIcon Kind="Magnify" 
