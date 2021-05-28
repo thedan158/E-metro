@@ -1,0 +1,70 @@
+﻿<Window x:Class="E_Metro.Ticket_kind"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:E_Metro"
+        mc:Ignorable="d"
+        
+        xmlns:uc="clr-namespace:E_Metro.UserControlKteam"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Name="ticket_kind"
+        Title="Ticket_kind" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <uc:ControlBarUC Tag="{Binding Title, ElementName=ticket_kind}" ></uc:ControlBarUC>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"  Height="Auto" Margin="90,132,95,132">
+                    <Grid>
+
+                        <Grid Grid.Row="0">
+                            <TextBlock 
+                                    Text="DAY" 
+                                    HorizontalAlignment="Center" 
+                                    FontSize="40">
+                            </TextBlock>
+                        </Grid>
+
+                    </Grid>
+
+                </Button>
+                <Button Grid.Column="1"   Height="Auto" Margin="90,132,95,132">
+                    <Grid>
+
+                        <Grid Grid.Row="0">
+                            <TextBlock 
+                                    Text="MONTH" 
+                                    HorizontalAlignment="Center" 
+                                    FontSize="40">
+                            </TextBlock>
+                        </Grid>
+
+                    </Grid>
+
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
