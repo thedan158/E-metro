@@ -35,10 +35,10 @@
                             <Label>Số điện thoại</Label>
                         </StackPanel>
                         <StackPanel>
-                            <TextBox x:Name="tbTen" Height="25" Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox x:Name="tbCMND" Height="25"  Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox x:Name="tbMaKH" Height="25" Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox x:Name="tbSDT" Height="25" Width="150" IsReadOnly="True"></TextBox>
+                            <TextBox Height="25" Width="150" IsReadOnly="True"></TextBox>
+                            <TextBox  Height="25"  Width="150" IsReadOnly="True"></TextBox>
+                            <TextBox  Height="25" Width="150" IsReadOnly="True"></TextBox>
+                            <TextBox  Height="25" Width="150" IsReadOnly="True"></TextBox>
                         </StackPanel>
                     </WrapPanel>
                 </GroupBox>
@@ -48,9 +48,9 @@
                     <WrapPanel>
                         <StackPanel>
                             <Label>Mã tuyến</Label>
-                            <Label>Địa điểm đi</Label>
-                            <Label>Ngày đi</Label>
+                            <Label>Mã vé</Label>
                             <Label>Giờ đi</Label>
+                            <Label>Ga đi</Label>
                         </StackPanel>
                         <StackPanel>
                             <TextBox     Height="25" Width="80" IsReadOnly="True"></TextBox>
@@ -59,10 +59,10 @@
                             <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
                         </StackPanel>
                         <StackPanel>
-                            <Label>Địa điểm đến</Label>
+                            <Label>Ga đến</Label>
                         </StackPanel>
                         <StackPanel>
-                            <TextBox x:Name="tbGaDen"  Height="25" Width="80" IsReadOnly="True"></TextBox>
+                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
                         </StackPanel>
                     </WrapPanel>
                 </GroupBox>
@@ -88,9 +88,9 @@
                 <Button Height="53" Width="80" Content="Chọn"  Margin="10,110,-10,117" />
                 <Button Height="53" Width="80" Content="Lưu"  Margin="100,110,-100,117" />
             </Grid>
-               
 
-            
+
+
         </WrapPanel>
     </StackPanel>
 </Window>
