@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\E_Metro"
+    "\\E_Metro\\Database",
+    "\\E_Metro\\Model",
+    "\\E_Metro\\obj",
+    "\\E_Metro\\ViewModel"
   ],
   "SelectedNode": "\\E_Metro.sln",
   "PreviewInSolutionExplorer": false

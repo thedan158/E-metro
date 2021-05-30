@@ -17,9 +17,11 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
         ResizeMode="NoResize"
+        DataContext="{StaticResource CompanyVM}"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Title="CompanyWindow" Height="450" Width="600">
+        Title="CompanyWindow" Height="450" Width="800">
+         
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -85,12 +87,12 @@
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
                                 <TextBlock 
-                                    Text="Tra cứu" 
+                                    Text="Chỉnh sửa" 
                                     HorizontalAlignment="Center" >
                                 </TextBlock>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <materialDesign:PackIcon Kind="Magnify" 
+                                <materialDesign:PackIcon Kind="Pencil" 
                                  HorizontalAlignment="Center" />
                             </Grid>
                         </Grid>
@@ -105,98 +107,86 @@
             <!--Giao dien-->
             <Grid Grid.Row="1" Margin="15">
 
-                <ListView
-                    x:Name="ThingListView">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn
-                                Header="MÃ TUYẾN">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <ComboBox
-                                          Width="100">
-                                            <ComboBoxItem
-                                            Content="Test" />
-                                            <ComboBoxItem
-                                            Content="Test2" />
-                                            <ComboBoxItem
-                                            Content="Test3" />
-                                        </ComboBox>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-                            <GridViewColumn
-                                Header="TÊN TUYẾN">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <ComboBox
-                                          Width="100">
-                                            <ComboBoxItem
-                                            Content="Test" />
-                                            <ComboBoxItem
-                                            Content="Test2" />
-                                            <ComboBoxItem
-                                            Content="Test3" />
-                                        </ComboBox>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
+                <Grid Grid.Column="0">
+                    <ListView
+                    x:Name="RailWayList" ItemsSource="{Binding myList}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn
+                                Header="MÃ TUYẾN"
+                                DisplayMemberBinding="{Binding Id}">
 
-                            <GridViewColumn
-                                Header="GA ĐẾN">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <ComboBox
-                                          Width="100">
-                                            <ComboBoxItem
-                                            Content="Test" />
-                                            <ComboBoxItem
-                                            Content="Test2" />
-                                            <ComboBoxItem
-                                            Content="Test3" />
-                                        </ComboBox>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
+                                </GridViewColumn>
 
-                            <GridViewColumn
-                                Header="GA ĐI">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <ComboBox
-                                          Width="100">
-                                            <ComboBoxItem
-                                            Content="Test" />
-                                            <ComboBoxItem
-                                            Content="Test2" />
-                                            <ComboBoxItem
-                                            Content="Test3" />
-                                        </ComboBox>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                          
-                            <GridViewColumn
-                                Header="GIÁ">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <ComboBox
-                                          Width="100">
-                                            <ComboBoxItem
-                                            Content="Test" />
-                                            <ComboBoxItem
-                                            Content="Test2" />
-                                            <ComboBoxItem
-                                            Content="Test3" />
-                                        </ComboBox>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
+                                <GridViewColumn
+                                Header="TÊN TUYẾN"
+                                DisplayMemberBinding="{Binding DisplayName}">
 
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+                                </GridViewColumn>
+
+                                <GridViewColumn
+                                Header="ID GA ĐẾN"
+                                DisplayMemberBinding="{Binding DestinationID}">
+
+                                </GridViewColumn>
+
+                                <GridViewColumn
+                                Header="ID GA ĐI"
+                                DisplayMemberBinding="{Binding DepartureID}">
+
+                                </GridViewColumn>
+
+                                <GridViewColumn
+                                Header="GIÁ"
+                                DisplayMemberBinding="{Binding Price}">
+
+                                </GridViewColumn>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+
+                <materialDesign:Card Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <TextBlock Text="Danh sách ga"
+                                   FontSize="15"
+                                   TextAlignment="Center">
+                            </TextBlock>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <ListView ItemsSource="{Binding staionList}">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn
+                                            Header="ID"
+                                            DisplayMemberBinding="{Binding Id}">
+                                        </GridViewColumn>
+
+                                        <GridViewColumn
+                                            Header="TÊN"
+                                            DisplayMemberBinding="{Binding DisplayName}">
+                                        </GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+
+                        </Grid>
+
+                    </Grid>
+                </materialDesign:Card>
 
             </Grid>
 

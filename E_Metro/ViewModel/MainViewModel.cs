@@ -1,5 +1,7 @@
-﻿using System;
+﻿using E_Metro.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +12,7 @@ namespace E_Metro.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
+        
         public bool Isloaded = false;
         public ICommand LoadedWindowCommand { get; set; }
         public ICommand TicketWindowCommand { get; set; }
@@ -46,5 +49,6 @@ namespace E_Metro.ViewModel
             CompanyWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CompanyWindow wd = new CompanyWindow(); wd.ShowDialog(); });
             TrafficWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => { TrafficWindow wd = new TrafficWindow(); wd.ShowDialog(); });
         }
+        
     }
 }
