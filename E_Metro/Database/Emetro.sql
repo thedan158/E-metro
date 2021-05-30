@@ -1,3 +1,4 @@
+Create Database EMetro
 USE [EMetro]
 GO
 /****** Object:  Table [dbo].[Company]    Script Date: 5/28/2021 1:51:30 AM ******/

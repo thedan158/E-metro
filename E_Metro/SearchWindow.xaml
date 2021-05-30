@@ -14,6 +14,7 @@
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
+         DataContext="{StaticResource SearchCompanyVM}"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
@@ -44,7 +45,7 @@
 
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
+                   
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
@@ -55,50 +56,44 @@
 
                 </Grid.ColumnDefinitions>
 
+               
+
                 <Grid Grid.Column="0">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Mã chuyến"
-                        Text="{Binding StationCodeSearch}"
+                        materialDesign:HintAssist.Hint="Tên chuyến"
+                        Text="{Binding SName}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="1">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Tên chuyến"
-                        Text="{Binding StationNameSearch}"
+                        materialDesign:HintAssist.Hint="Ga đến"
+                        Text="{Binding IdAStation}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="2">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Ga đến"
-                        Text="{Binding AStationSearch}"
+                        materialDesign:HintAssist.Hint="Ga đi"
+                        Text="{Binding IdLStation}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="3">
                     <TextBox
-                        materialDesign:HintAssist.Hint="Ga đi"
-                        Text="{Binding LStationSearch}"
+                        materialDesign:HintAssist.Hint="Giá"
+                        Text="{Binding SPrice}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="4">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Giá"
-                        Text="{Binding PriceSearch}"
-                        Margin="8 0 0 0">
-                    </TextBox>
-                </Grid>
-
-                <Grid Grid.Column="5">
-                    <Button>
+                    <Button Command="{Binding EditCommand}">
                         <Grid>
-                            <materialDesign:PackIcon Kind="Magnify" 
+                            <materialDesign:PackIcon Kind="Pencil" 
                                  HorizontalAlignment="Center" />
                         </Grid>
                     </Button>
@@ -106,55 +101,92 @@
 
             </Grid>
 
-            <Grid Grid.Row="1">
-                <ListView
-                    x:Name="ThingListView">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn
+            <Grid Grid.Row="1" Margin="15">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <ListView
+                    x:Name="RailWayList" SelectedItem="{Binding Selected}" ItemsSource="{Binding myList}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn
                                 Header="MÃ TUYẾN"
-                                 DisplayMemberBinding="{Binding StationCode}">
-                            </GridViewColumn>
+                                DisplayMemberBinding="{Binding Id}">
 
-                            <GridViewColumn
+                                </GridViewColumn>
+
+                                <GridViewColumn
                                 Header="TÊN TUYẾN"
-                                DisplayMemberBinding="{Binding StationName}">
-                            </GridViewColumn>
+                                DisplayMemberBinding="{Binding DisplayName}">
 
-                            <GridViewColumn
-                                Header="GA ĐẾN"
-                                DisplayMemberBinding="{Binding AStation}">
-                            </GridViewColumn>
+                                </GridViewColumn>
 
-                            <GridViewColumn
-                                Header="GA ĐI"
-                                DisplayMemberBinding="{Binding LStation}">
-                            </GridViewColumn>
-                            
-                            <GridViewColumn
+                                <GridViewColumn
+                                Header="ID GA ĐẾN"
+                                DisplayMemberBinding="{Binding DestinationID}">
+
+                                </GridViewColumn>
+
+                                <GridViewColumn
+                                Header="ID GA ĐI"
+                                DisplayMemberBinding="{Binding DepartureID}">
+
+                                </GridViewColumn>
+
+                                <GridViewColumn
                                 Header="GIÁ"
                                 DisplayMemberBinding="{Binding Price}">
-                                
-                            </GridViewColumn>
 
-                            <GridViewColumn>
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Button>
-                                            <Grid>
-                                                <materialDesign:PackIcon Kind="Delete" 
-                                                HorizontalAlignment="Center" />
-                                            </Grid>
-                                        </Button>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
+                                </GridViewColumn>
 
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+
+                <materialDesign:Card Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <TextBlock Text="Danh sách ga"
+                                   FontSize="15"
+                                   TextAlignment="Center">
+                            </TextBlock>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <ListView ItemsSource="{Binding staionList}">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn
+                                            Header="ID"
+                                            DisplayMemberBinding="{Binding Id}">
+                                        </GridViewColumn>
+
+                                        <GridViewColumn
+                                            Header="TÊN"
+                                            DisplayMemberBinding="{Binding DisplayName}">
+                                        </GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+
+                        </Grid>
+
+                    </Grid>
+                </materialDesign:Card>
+
             </Grid>
-            
+
+
         </Grid>
         
     </Grid>

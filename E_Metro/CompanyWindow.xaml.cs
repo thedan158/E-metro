@@ -19,9 +19,11 @@ namespace E_Metro
     /// </summary>
     public partial class CompanyWindow : Window
     {
+
         public CompanyWindow()
         {
             InitializeComponent();
+
         }
 
         private void Search_Click(object sender, RoutedEventArgs e)
