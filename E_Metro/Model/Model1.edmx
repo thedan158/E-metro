@@ -24,6 +24,7 @@
           <Property Name="DepartureID" Type="int" />
           <Property Name="DestinationID" Type="int" />
           <Property Name="Price" Type="money" />
+          <Property Name="OwnedCompanyId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Station">
           <Key>
@@ -91,6 +92,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__RailWay__OwnedCo__47DBAE45">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="RailWay" Type="Self.RailWay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RailWay">
+              <PropertyRef Name="OwnedCompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Ticket__IdType__36B12243">
           <End Role="TicketType" Type="Self.TicketType" Multiplicity="0..1" />
           <End Role="Ticket" Type="Self.Ticket" Multiplicity="*" />
@@ -143,6 +156,10 @@
             <End Role="Station" EntitySet="Station" />
             <End Role="RailWay" EntitySet="RailWay" />
           </AssociationSet>
+          <AssociationSet Name="FK__RailWay__OwnedCo__47DBAE45" Association="Self.FK__RailWay__OwnedCo__47DBAE45">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="RailWay" EntitySet="RailWay" />
+          </AssociationSet>
           <AssociationSet Name="FK__Ticket__IdType__36B12243" Association="Self.FK__Ticket__IdType__36B12243">
             <End Role="TicketType" EntitySet="TicketType" />
             <End Role="Ticket" EntitySet="Ticket" />
@@ -170,6 +187,7 @@
           <Property Name="Website" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="RailWays" Relationship="Self.FK__RailWay__OwnedCo__47DBAE45" FromRole="Company" ToRole="RailWay" />
         </EntityType>
         <EntityType Name="RailWay">
           <Key>
@@ -180,6 +198,8 @@
           <Property Name="DepartureID" Type="Int32" />
           <Property Name="DestinationID" Type="Int32" />
           <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OwnedCompanyId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="Self.FK__RailWay__OwnedCo__47DBAE45" FromRole="RailWay" ToRole="Company" />
           <NavigationProperty Name="Station" Relationship="Self.FK__RailWay__Departu__2D27B809" FromRole="RailWay" ToRole="Station" />
           <NavigationProperty Name="Station1" Relationship="Self.FK__RailWay__Destina__2E1BDC42" FromRole="RailWay" ToRole="Station" />
           <NavigationProperty Name="Tickets" Relationship="Self.FK__Ticket__RailwayI__35BCFE0A" FromRole="RailWay" ToRole="Ticket" />
@@ -233,6 +253,18 @@
           <Property Name="IdRole" Type="Int32" Nullable="false" />
           <NavigationProperty Name="UserRole" Relationship="Self.FK__Users__IdRole__267ABA7A" FromRole="Users" ToRole="UserRole" />
         </EntityType>
+        <Association Name="FK__RailWay__OwnedCo__47DBAE45">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="RailWay" Type="Self.RailWay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RailWay">
+              <PropertyRef Name="OwnedCompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__RailWay__Departu__2D27B809">
           <End Role="Station" Type="Self.Station" Multiplicity="0..1" />
           <End Role="RailWay" Type="Self.RailWay" Multiplicity="*" />
@@ -293,7 +325,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EMetroEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EMetroEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Companies" EntityType="Self.Company" />
           <EntitySet Name="RailWays" EntityType="Self.RailWay" />
           <EntitySet Name="Stations" EntityType="Self.Station" />
@@ -301,6 +333,10 @@
           <EntitySet Name="TicketTypes" EntityType="Self.TicketType" />
           <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
           <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__RailWay__OwnedCo__47DBAE45" Association="Self.FK__RailWay__OwnedCo__47DBAE45">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="RailWay" EntitySet="RailWays" />
+          </AssociationSet>
           <AssociationSet Name="FK__RailWay__Departu__2D27B809" Association="Self.FK__RailWay__Departu__2D27B809">
             <End Role="Station" EntitySet="Stations" />
             <End Role="RailWay" EntitySet="RailWays" />
@@ -327,7 +363,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EMetroModelStoreContainer" CdmEntityContainer="EMetroEntities1">
+        <EntityContainerMapping StorageEntityContainer="EMetroModelStoreContainer" CdmEntityContainer="EMetroEntities2">
           <EntitySetMapping Name="Companies">
             <EntityTypeMapping TypeName="EMetroModel.Company">
               <MappingFragment StoreEntitySet="Company">
@@ -347,6 +383,7 @@
                 <ScalarProperty Name="DepartureID" ColumnName="DepartureID" />
                 <ScalarProperty Name="DestinationID" ColumnName="DestinationID" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="OwnedCompanyId" ColumnName="OwnedCompanyId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
