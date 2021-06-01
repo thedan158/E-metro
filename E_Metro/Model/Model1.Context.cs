@@ -13,10 +13,10 @@ namespace E_Metro.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EMetroEntities1 : DbContext
+    public partial class EMetroEntities2 : DbContext
     {
-        public EMetroEntities1()
-            : base("name=EMetroEntities1")
+        public EMetroEntities2()
+            : base("name=EMetroEntities2")
         {
         }
     

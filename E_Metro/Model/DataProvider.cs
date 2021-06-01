@@ -22,10 +22,10 @@ namespace E_Metro.Model
                 _ins = value;
             }
         }
-        public EMetroEntities1 DB { get; set; }
+        public EMetroEntities2 DB { get; set; }
         private DataProvider()
         {
-            DB = new EMetroEntities1();
+            DB = new EMetroEntities2();
         }
     }
 }
