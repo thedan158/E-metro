@@ -16,10 +16,13 @@ namespace E_Metro.ViewModel
         private ObservableCollection<Station> _staionList;
         public ObservableCollection<Station> staionList { get => _staionList; set { _staionList = value; OnPropertyChanged(); } }
 
+        public string keeper = LoginViewModel.idR;
+
 
         public CompanyViewModel()
         {
-            myList =  new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays);
+            int code = int.Parse(keeper);
+            myList =  new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays.Where(a => a.OwnedCompanyId == code));
             staionList = new ObservableCollection<Station>(DataProvider.Ins.DB.Stations);
         }
     }

@@ -17,6 +17,7 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
         ResizeMode="NoResize"
+        DataContext="{StaticResource SearchTraffic1VM}"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         
@@ -48,55 +49,47 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+
 
 
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column="1">
+                <Grid Grid.Column="0">
                     <TextBox
                         materialDesign:HintAssist.Hint="TÊN CÔNG TY"
-                        Text="{Binding StationCodeSearch}"
+                        Text="{Binding SName}"
+                        Margin="8 0 0 0">
+                    </TextBox>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="WEBSITE"
+                        Text="{Binding SWeb}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="2">
                     <TextBox
-                        materialDesign:HintAssist.Hint="WEBSITE"
-                        Text="{Binding StationNameSearch}"
+                        materialDesign:HintAssist.Hint="TRỤ SỞ"
+                        Text="{Binding SAddress}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="3">
                     <TextBox
-                        materialDesign:HintAssist.Hint="TRỤ SỞ"
-                        Text="{Binding AStationSearch}"
+                        materialDesign:HintAssist.Hint="SĐT"
+                        Text="{Binding SPhone}"
                         Margin="8 0 0 0">
                     </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="4">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="SĐT"
-                        Text="{Binding LStationSearch}"
-                        Margin="8 0 0 0">
-                    </TextBox>
-                </Grid>
-
-                <Grid Grid.Column="0">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Mã Công Ty"
-                        Text="{Binding LStationSearch}"
-                        Margin="8 0 0 0">
-                    </TextBox>
-                </Grid>
-
-                <Grid Grid.Column="5">
-                    <Button>
+                    <Button Command="{Binding EditCommand}">
                         <Grid>
-                            <materialDesign:PackIcon Kind="Magnify" 
+                            <materialDesign:PackIcon Kind="Pencil" 
                                  HorizontalAlignment="Center" />
                         </Grid>
                     </Button>
@@ -105,52 +98,36 @@
             </Grid>
 
             <Grid Grid.Row="1">
+                
                 <ListView
-                    x:Name="ThingListView">
+                    ItemsSource="{Binding myList1}"
+                    SelectedItem="{Binding Selected}" Grid.ColumnSpan="2">
                     <ListView.View>
                         <GridView>
 
                             <GridViewColumn
                                 Header="MÃ CÔNG TY"
-                                DisplayMemberBinding="{Binding LStation}">
+                                DisplayMemberBinding="{Binding Id}">
                             </GridViewColumn>
 
                             <GridViewColumn
                                 Header="TÊN CÔNG TY"
-                                 DisplayMemberBinding="{Binding StationCode}">
+                                 DisplayMemberBinding="{Binding DisplayName}">
                             </GridViewColumn>
 
                             <GridViewColumn
                                 Header="ĐC WEBSITE"
-                                DisplayMemberBinding="{Binding StationName}">
+                                DisplayMemberBinding="{Binding Website}">
                             </GridViewColumn>
 
                             <GridViewColumn
                                 Header="ĐC TRỤ SỞ CHÍNH"
-                                DisplayMemberBinding="{Binding AStation}">
+                                DisplayMemberBinding="{Binding Address}">
                             </GridViewColumn>
 
                             <GridViewColumn
                                 Header="SĐT"
-                                DisplayMemberBinding="{Binding LStation}">
-                            </GridViewColumn>
-
-
-
-
-
-
-                            <GridViewColumn>
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Button>
-                                            <Grid>
-                                                <materialDesign:PackIcon Kind="Delete" 
-                                                HorizontalAlignment="Center" />
-                                            </Grid>
-                                        </Button>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
+                                DisplayMemberBinding="{Binding Phone}">
                             </GridViewColumn>
 
                         </GridView>

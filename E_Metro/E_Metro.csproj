@@ -159,6 +159,9 @@
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\SearchViewModelCompany.cs" />
+    <Compile Include="ViewModel\SearchViewModelTraffic1.cs" />
+    <Compile Include="ViewModel\SearchViewModelTraffic2.cs" />
+    <Compile Include="ViewModel\TrafficViewModel.cs" />
     <Page Include="AddWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

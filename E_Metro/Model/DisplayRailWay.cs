@@ -9,6 +9,7 @@ namespace E_Metro.Model
     public class DisplayRailWay
     {
         public RailWay railway { get; set; }
+
         
         
     }

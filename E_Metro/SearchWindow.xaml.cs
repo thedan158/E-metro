@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Metro.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Linq;
+using System.Collections.ObjectModel;
+
 
 namespace E_Metro
 {
@@ -18,10 +22,13 @@ namespace E_Metro
     /// Interaction logic for SearchWindow.xaml
     /// </summary>
     public partial class SearchWindow : Window
-    {
+    {       
         public SearchWindow()
         {
             InitializeComponent();
+
         }
+
+        
     }
 }

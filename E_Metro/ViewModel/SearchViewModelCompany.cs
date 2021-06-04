@@ -18,7 +18,7 @@ namespace E_Metro.ViewModel
 
         private ObservableCollection<Station> _staionList;
         public ObservableCollection<Station> staionList { get => _staionList; set { _staionList = value; OnPropertyChanged(); } }
-
+      
         private RailWay _Selected;
         public RailWay Selected { get => _Selected; 
             set
@@ -46,13 +46,22 @@ namespace E_Metro.ViewModel
 
         private decimal? _SPrice;
         public decimal? SPrice { get => _SPrice; set { _SPrice = value; OnPropertyChanged(); } }
+        private ObservableCollection<int> _boxList;
+        public ObservableCollection<int> boxList { get => _boxList; set { _boxList = value; OnPropertyChanged(); } }
 
-
+        public string keeper = LoginViewModel.idR;
 
         public SearchViewModelCompany()
         {
-            myList = new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays);
+            int code = int.Parse(keeper);
+
+            myList = new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays.Where(a => a.OwnedCompanyId == code));
+            
             staionList = new ObservableCollection<Station>(DataProvider.Ins.DB.Stations);
+
+            List<int> list = DataProvider.Ins.DB.Stations.Select(x => x.Id).ToList();
+
+            boxList = new ObservableCollection<int>(list);
 
             EditCommand = new RelayCommand<object>((p) => 
             {

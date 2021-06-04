@@ -1,7 +1,9 @@
 ﻿using E_Metro.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -9,6 +11,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace E_Metro.ViewModel
+
 {
     public class LoginViewModel : BaseViewModel
     {
@@ -20,7 +23,9 @@ namespace E_Metro.ViewModel
         public ICommand LoginCommand { get; set; }
         public ICommand CloseCommand { get; set; }
         public ICommand PasswordChangedCommand { get; set; }
-   
+
+        public static string idR;
+ 
 
         // mọi thứ xử lý sẽ nằm trong này
         public LoginViewModel()
@@ -34,14 +39,19 @@ namespace E_Metro.ViewModel
         }
 
         void Login(Window p)
-        {
+        {           
             if (p == null)
                 return;
             string passEncode = CreateMD5(Base64Encode(Password));
             var accCount = DataProvider.Ins.DB.Users.Where(x => x.Username == UserName && x.Password == passEncode ).Count();
+            var sss = DataProvider.Ins.DB.Users.Where(x => x.Username == UserName && x.Password == passEncode).Select(x => x.IdRole).ToArray();
+
+            idR = sss[0].ToString();
+                                                            
             if (accCount > 0)
             {
                 IsLogin = true;
+                Console.WriteLine("-----------" + idR);
                 p.Close();
             }
             else
@@ -73,5 +83,7 @@ namespace E_Metro.ViewModel
                 return sb.ToString();
             }
         }
+
+        
     }
 }

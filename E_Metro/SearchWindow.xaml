@@ -67,19 +67,21 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <TextBox
+                    <ComboBox
                         materialDesign:HintAssist.Hint="Ga đến"
-                        Text="{Binding IdAStation}"
+                        ItemsSource="{Binding boxList}"
+                        SelectedItem="{Binding IdAStation}"
                         Margin="8 0 0 0">
-                    </TextBox>
+                    </ComboBox>
                 </Grid>
 
                 <Grid Grid.Column="2">
-                    <TextBox
+                    <ComboBox
                         materialDesign:HintAssist.Hint="Ga đi"
-                        Text="{Binding IdLStation}"
+                        ItemsSource="{Binding boxList}"
+                        SelectedItem="{Binding IdAStation}"
                         Margin="8 0 0 0">
-                    </TextBox>
+                    </ComboBox>
                 </Grid>
 
                 <Grid Grid.Column="3">

@@ -15,6 +15,7 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
         ResizeMode="NoResize"
+        DataContext="{StaticResource TrafficVM}"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Name="Traffic"
@@ -83,12 +84,12 @@
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">
                                     <TextBlock 
-                                    Text="Tra cứu" 
+                                    Text="Chỉnh sửa" 
                                     HorizontalAlignment="Center" >
                                     </TextBlock>
                                 </Grid>
                                 <Grid Grid.Row="1">
-                                    <materialDesign:PackIcon Kind="Magnify" 
+                                    <materialDesign:PackIcon Kind="Pencil" 
                                  HorizontalAlignment="Center" />
                                 </Grid>
                             </Grid>
@@ -99,26 +100,31 @@
                     </Grid>
 
                     <Grid Grid.Row="2">
-                        <ListView>
+                        <ListView ItemsSource="{Binding myList1}">
                             <ListView.View>
                                 <GridView>
                                     <GridViewColumn
+                                    DisplayMemberBinding="{Binding Id}"
                                     Header="MÃ">
                                     </GridViewColumn>
 
                                     <GridViewColumn
+                                    DisplayMemberBinding="{Binding DisplayName}"
                                     Header="TÊN">
                                     </GridViewColumn>
 
                                     <GridViewColumn
+                                    DisplayMemberBinding="{Binding Website}"
                                     Header="WEBSITE">
                                     </GridViewColumn>
 
                                     <GridViewColumn
+                                    DisplayMemberBinding="{Binding Address}"
                                     Header="ĐỊA CHỈ">
                                     </GridViewColumn>
 
                                     <GridViewColumn
+                                    DisplayMemberBinding="{Binding Phone}"
                                     Header="SĐT">
                                     </GridViewColumn>
                                 </GridView>
@@ -177,12 +183,12 @@
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">
                                     <TextBlock 
-                                    Text="Tra cứu" 
+                                    Text="Chỉnh sửa" 
                                     HorizontalAlignment="Center" >
                                     </TextBlock>
                                 </Grid>
                                 <Grid Grid.Row="1">
-                                    <materialDesign:PackIcon Kind="Magnify" 
+                                    <materialDesign:PackIcon Kind="Pencil" 
                                  HorizontalAlignment="Center" />
                                 </Grid>
                             </Grid>
@@ -193,22 +199,26 @@
                     </Grid>
 
                     <Grid Grid.Row="2">
-                        <ListView>
+                        <ListView ItemsSource="{Binding myList2}">
                             <ListView.View>
                                 <GridView>
                                     <GridViewColumn
+                                        DisplayMemberBinding="{Binding Id}"
                                     Header="MÃ">
                                     </GridViewColumn>
 
                                     <GridViewColumn
+                                        DisplayMemberBinding="{Binding DisplayName}"
                                     Header="TÊN">
                                     </GridViewColumn>
 
                                     <GridViewColumn
+                                        DisplayMemberBinding="{Binding Address}"
                                     Header="ĐỊA CHỈ">
                                     </GridViewColumn>
 
                                     <GridViewColumn
+                                        DisplayMemberBinding="{Binding Status}"
                                     Header="TÌNH TRẠNG">
                                     </GridViewColumn>
                                 </GridView>
