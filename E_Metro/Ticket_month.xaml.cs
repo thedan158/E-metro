@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace E_Metro
 {
     /// <summary>
-    /// Interaction logic for Ticket_kind.xaml
+    /// Interaction logic for Ticket_month.xaml
     /// </summary>
-    public partial class Ticket_kind : Window
+    public partial class Ticket_month : Window
     {
-        public Ticket_kind()
+        public Ticket_month()
         {
             InitializeComponent();
         }

@@ -17,80 +17,82 @@
      FontFamily="{DynamicResource MaterialDesignFont}"
         ResizeMode="NoResize"
         WindowStyle="None"
+        DataContext="{StaticResource TicketdayVM}"
         WindowStartupLocation="CenterScreen"
         Name="banVe"
         Title="Banve" Height="450" Width="800">
-    <StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
         <Grid Grid.Row="0">
-            <uc:ControlBarUC Tag="{Binding Title, ElementName=banVe}"></uc:ControlBarUC>
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=banVe}" ></uc:ControlBarUC>
         </Grid>
-        <WrapPanel>
-            <StackPanel Width="400">
-                <GroupBox Header="Thông tin khách hàng" >
-                    <WrapPanel >
-                        <StackPanel>
-                            <Label>Tên khách hàng</Label>
-                            <Label>CMND</Label>
-                            <Label>Mã KH</Label>
-                            <Label>Số điện thoại</Label>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBox Height="25" Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox  Height="25"  Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox  Height="25" Width="150" IsReadOnly="True"></TextBox>
-                            <TextBox  Height="25" Width="150" IsReadOnly="True"></TextBox>
-                        </StackPanel>
-                    </WrapPanel>
-                </GroupBox>
-            </StackPanel>
-            <StackPanel Width="400">
-                <GroupBox Header="Thông tin đặt vé" Width="400" >
-                    <WrapPanel>
-                        <StackPanel>
-                            <Label>Mã tuyến</Label>
-                            <Label>Mã vé</Label>
-                            <Label>Giờ đi</Label>
-                            <Label>Ga đi</Label>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBox     Height="25" Width="80" IsReadOnly="True"></TextBox>
-                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
-                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
-                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
-                        </StackPanel>
-                        <StackPanel>
-                            <Label>Ga đến</Label>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
-                        </StackPanel>
-                    </WrapPanel>
-                </GroupBox>
-            </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
 
-        </WrapPanel>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <GroupBox Header="Thông tin đặt vé" Margin="0,0,2.6,-0.4" >
+                        <WrapPanel>
+                            <StackPanel Width="64">
+                                <Label>Mã tuyến</Label>
+                                <Label>Mã vé</Label>
+                                <Label>Ngày đi</Label>
+                            </StackPanel>
+                            <StackPanel Width="155">
+                                <TextBox    Height="25" Width="150" IsReadOnly="True"></TextBox>
+                                <TextBox   Height="25" Width="150" IsReadOnly="True"></TextBox>
+                                <TextBox   Height="25" Width="150" IsReadOnly="True"></TextBox>
 
-        <WrapPanel Margin="0,20,0,0" Height="280">
-            <Grid Width="590" Height="332" HorizontalAlignment="Left" >
-                <DataGrid Grid.Column="0"  >
+                            </StackPanel>
+                            <StackPanel Width="70">
+                                <Label>Giờ đi</Label>
+                                <Label>Ga đi</Label>
+                                <Label>Ga dến</Label>
+                            </StackPanel>
+                            <StackPanel  Width="155">
+                                <TextBox   Height="25" Width="150" IsReadOnly="True"></TextBox>
+                                <TextBox   Height="25" Width="150" IsReadOnly="True"></TextBox>
+                                <TextBox   Height="25" Width="150" IsReadOnly="True"></TextBox>
+                            </StackPanel>
+                        </WrapPanel>
+                    </GroupBox>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Chọn" Grid.Column="0" HorizontalAlignment="Center" Margin="10,47,12.8,0" VerticalAlignment="Top" Width="66" Height="45"/>
+                    <Button Content="In" Grid.Column="1" HorizontalAlignment="Left"  Margin="10,47,12.8,0" VerticalAlignment="Top" Width="66" Height="45"/>
+                    <Button Content="Month" Click="Button_Click" Grid.Column="2" HorizontalAlignment="Center"  Margin="5.4,47,5.4,0" VerticalAlignment="Top" Width="78" Height="45"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <DataGrid Grid.Column="0" ItemsSource="{Binding DayList}" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã vé"/>
-                        <DataGridTextColumn Header="Mã tuyến"/>
-                        <DataGridTextColumn Header="Ga đi"/>
-                        <DataGridTextColumn Header="Ga đến"/>
-                        <DataGridTextColumn Header="Giờ đi"/>
-                        <DataGridTextColumn Header="Giá vé" />
+                        <DataGridTextColumn Header="Mã tuyến" Binding="{Binding RailwayID}"/>
+                        <DataGridTextColumn Header="Mã vé" Binding="{Binding Id}"/>
+                        <DataGridTextColumn Header="Ga đi" Binding="{Binding RailWay.DepartureID}"/>
+                        <DataGridTextColumn Header="Ga đến" Binding="{Binding RailWay.DestinationID}"/>
+                        <DataGridTextColumn Header="Ngày đi"/>
+                        <DataGridTextColumn Header="Giờ đi" Binding="{Binding DepartTime}"/>
+                        <DataGridTextColumn Header="Giá vé" Binding="{Binding RailWay.Price}"/>
                     </DataGrid.Columns>
                 </DataGrid>
-
             </Grid>
-            <Grid>
-                <Button Height="53" Width="80" Content="Chọn"  Margin="10,110,-10,117" />
-                <Button Height="53" Width="80" Content="Lưu"  Margin="100,110,-100,117" />
-            </Grid>
-
-
-
-        </WrapPanel>
-    </StackPanel>
+        </Grid>
+    </Grid>
 </Window>

@@ -23,5 +23,11 @@ namespace E_Metro
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Ticket_month wd = new Ticket_month();
+            wd.ShowDialog();
+        }
     }
 }
