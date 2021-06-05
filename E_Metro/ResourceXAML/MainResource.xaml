@@ -9,4 +9,6 @@
     <viewmodel:TrafficViewModel x:Key="TrafficVM"></viewmodel:TrafficViewModel>
     <viewmodel:SearchViewModelTraffic1 x:Key="SearchTraffic1VM"></viewmodel:SearchViewModelTraffic1>
     <viewmodel:SearchViewModelTraffic2 x:Key="SearchTraffic2VM"></viewmodel:SearchViewModelTraffic2>
+    <viewmodel:Ticket_day x:Key="TicketdayVM"></viewmodel:Ticket_day>
+    <viewmodel:Ticket_month x:Key="TicketmonthVM"></viewmodel:Ticket_month>
 </ResourceDictionary>

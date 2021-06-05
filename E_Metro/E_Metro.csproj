@@ -141,11 +141,8 @@
     <Compile Include="SearchWindowTraffic2.xaml.cs">
       <DependentUpon>SearchWindowTraffic2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ticket_day.xaml.cs">
-      <DependentUpon>Ticket_day.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Ticket_kind.xaml.cs">
-      <DependentUpon>Ticket_kind.xaml</DependentUpon>
+    <Compile Include="Ticket_month.xaml.cs">
+      <DependentUpon>Ticket_month.xaml</DependentUpon>
     </Compile>
     <Compile Include="TrafficWindow.xaml.cs">
       <DependentUpon>TrafficWindow.xaml</DependentUpon>
@@ -161,6 +158,8 @@
     <Compile Include="ViewModel\SearchViewModelCompany.cs" />
     <Compile Include="ViewModel\SearchViewModelTraffic1.cs" />
     <Compile Include="ViewModel\SearchViewModelTraffic2.cs" />
+    <Compile Include="ViewModel\Ticket_day.cs" />
+    <Compile Include="ViewModel\Ticket_month.cs" />
     <Compile Include="ViewModel\TrafficViewModel.cs" />
     <Page Include="AddWindow.xaml">
       <SubType>Designer</SubType>
@@ -214,11 +213,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Ticket_day.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Ticket_kind.xaml">
+    <Page Include="Ticket_month.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
