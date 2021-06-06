@@ -11,6 +11,7 @@
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
+        DataContext="{StaticResource AddCompanyVM}"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
@@ -30,21 +31,20 @@
             </Grid.ColumnDefinitions>
             <uc:ControlBarUC Tag="{Binding Title, ElementName=mainWindow}" Grid.ColumnSpan="2"></uc:ControlBarUC>
         </Grid>
-        <TextBox
-  materialDesign:HintAssist.Hint="Mã Tuyến" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+        <TextBox Text="{Binding DisplayName}"
+  materialDesign:HintAssist.Hint="Tên Tuyến" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
   VerticalAlignment="Center" Margin="19,34.2,272.6,193" Grid.Row="1" />
         <TextBox
-  materialDesign:HintAssist.Hint="Tên Tuyến" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-  VerticalAlignment="Center" Margin="19,90.2,272.6,137" Grid.Row="1" />
-        <TextBox
-  materialDesign:HintAssist.Hint="Giá" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-  VerticalAlignment="Center" Margin="19,151.2,272.6,76" Grid.Row="1" />
+            Text="{Binding SPrice}"
+  materialDesign:HintAssist.Hint="GIá" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+  VerticalAlignment="Center" Margin="19,90.2,272.6,137" Grid.Row="1" /> 
         <ComboBox
+            ItemsSource="{Binding boxList}"
+                        SelectedItem="{Binding IdLStation}"
   materialDesign:HintAssist.Hint="Ga đi"
   materialDesign:HintAssist.FloatingScale="1.5"
   materialDesign:HintAssist.FloatingOffset="0, -24"
   MinWidth="72"
-  ItemsSource="{Binding LongListToTestComboVirtualization}"
   Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="292,32.2,37.6,191" Grid.Row="1">
             <ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -54,10 +54,11 @@
         </ComboBox>
         <ComboBox
   materialDesign:HintAssist.Hint="Ga đến"
+            ItemsSource="{Binding boxList}"
+                        SelectedItem="{Binding IdAStation}"
   materialDesign:HintAssist.FloatingScale="1.5"
   materialDesign:HintAssist.FloatingOffset="0, -24"
   MinWidth="72"
-  ItemsSource="{Binding LongListToTestComboVirtualization}"
   Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="292,97.2,37.6,127" Grid.Row="1" RenderTransformOrigin="0.463,2.536">
             <ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -67,8 +68,9 @@
         </ComboBox>
         
         <Button
+            Command="{Binding AddCommand}"
   Style="{StaticResource MaterialDesignRaisedLightButton}"
- 
+    
   ToolTip="Resource name: MaterialDesignRaisedLightButton"
   Content="Add" Margin="134,212.2,138.6,19" Grid.Row="1" />
     </Grid>

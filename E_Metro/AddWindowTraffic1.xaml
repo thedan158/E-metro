@@ -12,6 +12,7 @@
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
+        DataContext="{StaticResource AddCompanyTrueVM}"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
         ResizeMode="NoResize"
@@ -37,7 +38,6 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
@@ -48,8 +48,8 @@
 
                 <Grid Grid.Column="0">
                     <Grid>
-                        <TextBox
-                        materialDesign:HintAssist.Hint="Mã Công Ty"
+                        <TextBox Text="{Binding DisplayName}"
+                        materialDesign:HintAssist.Hint="Tên Công Ty"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center"
                             Margin="37,10,37.8,5.8"/>
@@ -57,7 +57,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <TextBox
+                    <TextBox Text="{Binding Address}"
                         materialDesign:HintAssist.Hint="Địa Chỉ Công Ty"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center" 
@@ -73,16 +73,16 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Tên Công Ty"
+                    <TextBox Text="{Binding Website}"
+                        materialDesign:HintAssist.Hint="Website"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center" 
                         Margin="37,10,37.8,5.8"/>
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Website"
+                    <TextBox Text="{Binding Phone}"
+                        materialDesign:HintAssist.Hint="Số điện thoại"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center" 
                         Margin="37,10,37.8,5.8"/>
@@ -96,11 +96,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Số điện thoại"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                        VerticalAlignment="Center" 
-                        Margin="37,10,37.8,5.8"/>
+                 
                 </Grid>
 
 
@@ -114,7 +110,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="1">
-                    <Button
+                    <Button Command="{Binding AddCommand}"
   Style="{StaticResource MaterialDesignRaisedLightButton}"
   
   ToolTip="Resource name: MaterialDesignRaisedLightButton"

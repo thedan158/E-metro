@@ -11,4 +11,7 @@
     <viewmodel:SearchViewModelTraffic2 x:Key="SearchTraffic2VM"></viewmodel:SearchViewModelTraffic2>
     <viewmodel:Ticket_day x:Key="TicketdayVM"></viewmodel:Ticket_day>
     <viewmodel:Ticket_month x:Key="TicketmonthVM"></viewmodel:Ticket_month>
+    <viewmodel:AddCompanyViewModel x:Key="AddCompanyVM"></viewmodel:AddCompanyViewModel>
+    <viewmodel:AddCompanyTrueViewModel x:Key="AddCompanyTrueVM"></viewmodel:AddCompanyTrueViewModel>
+    <viewmodel:AddStationViewModel x:Key="AddStationVM"></viewmodel:AddStationViewModel>
 </ResourceDictionary>

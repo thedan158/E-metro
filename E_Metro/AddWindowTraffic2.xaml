@@ -11,6 +11,7 @@
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
+        DataContext="{StaticResource AddStationVM}"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
@@ -47,8 +48,8 @@
 
                 <Grid Grid.Column="0">
                     <Grid>
-                        <TextBox
-                        materialDesign:HintAssist.Hint="Mã Ga"
+                        <TextBox Text="{Binding DisplayName}"
+                        materialDesign:HintAssist.Hint="Tên Ga"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center"
                             Margin="37,10,37.8,5.8"/>
@@ -56,8 +57,8 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Địa Chỉ Ga"
+                    <TextBox Text="{Binding Status}"
+                        materialDesign:HintAssist.Hint="Tình trạng hoạt động"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center" 
                         Margin="37,10,37.8,5.8"/>
@@ -68,24 +69,20 @@
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Tên Ga"
+                    <TextBox Text="{Binding Address}"
+                        materialDesign:HintAssist.Hint="Địa Chỉ Ga"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center" 
                         Margin="37,10,37.8,5.8"/>
                 </Grid>
 
-                <Grid Grid.Column="1">
-                    <TextBox
-                        materialDesign:HintAssist.Hint="Tình Trạng Hoạt Động"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                        VerticalAlignment="Center" 
-                        Margin="37,10,37.8,5.8"/>
-                </Grid>
+               
+                   
+                
 
             </Grid>
 
@@ -98,7 +95,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="1">
-                    <Button
+                    <Button Command="{Binding AddCommand}"
   Style="{StaticResource MaterialDesignRaisedLightButton}"
   
   ToolTip="Resource name: MaterialDesignRaisedLightButton"
