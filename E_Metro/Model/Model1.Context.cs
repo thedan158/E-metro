@@ -26,9 +26,11 @@ namespace E_Metro.Model
         }
     
         public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<MonthlyTicket> MonthlyTickets { get; set; }
         public virtual DbSet<RailWay> RailWays { get; set; }
+        public virtual DbSet<StandarTicket> StandarTickets { get; set; }
         public virtual DbSet<Station> Stations { get; set; }
-        public virtual DbSet<Ticket> Tickets { get; set; }
+        public virtual DbSet<TicketSold> TicketSolds { get; set; }
         public virtual DbSet<TicketType> TicketTypes { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
         public virtual DbSet<User> Users { get; set; }

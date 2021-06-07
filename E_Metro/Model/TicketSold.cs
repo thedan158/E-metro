@@ -12,14 +12,16 @@ namespace E_Metro.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Ticket
+    public partial class TicketSold
     {
-        public int Id { get; set; }
+        public int SoldID { get; set; }
+        public Nullable<int> Id { get; set; }
         public Nullable<int> RailwayID { get; set; }
-        public byte[] DepartTime { get; set; }
         public Nullable<int> IdType { get; set; }
     
+        public virtual MonthlyTicket MonthlyTicket { get; set; }
         public virtual RailWay RailWay { get; set; }
+        public virtual StandarTicket StandarTicket { get; set; }
         public virtual TicketType TicketType { get; set; }
     }
 }

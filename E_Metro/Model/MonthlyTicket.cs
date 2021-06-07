@@ -12,24 +12,26 @@ namespace E_Metro.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Company
+    public partial class MonthlyTicket
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Company()
+        public MonthlyTicket()
         {
-            this.RailWays = new HashSet<RailWay>();
-            this.Users = new HashSet<User>();
+            this.TicketSolds = new HashSet<TicketSold>();
         }
     
         public int Id { get; set; }
-        public string DisplayName { get; set; }
-        public string Website { get; set; }
-        public string Address { get; set; }
+        public Nullable<int> IdType { get; set; }
+        public Nullable<int> RailwayID { get; set; }
+        public string ClientName { get; set; }
+        public string CLientIdentity { get; set; }
         public string Phone { get; set; }
+        public string StartDate { get; set; }
+        public string ExpireDate { get; set; }
     
+        public virtual TicketType TicketType { get; set; }
+        public virtual RailWay RailWay { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RailWay> RailWays { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<TicketSold> TicketSolds { get; set; }
     }
 }
