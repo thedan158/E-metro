@@ -19,7 +19,9 @@ namespace E_Metro.Model
         public string Username { get; set; }
         public string Password { get; set; }
         public int IdRole { get; set; }
+        public Nullable<int> CompanyID { get; set; }
     
+        public virtual Company Company { get; set; }
         public virtual UserRole UserRole { get; set; }
     }
 }

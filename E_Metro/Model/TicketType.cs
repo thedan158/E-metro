@@ -17,13 +17,19 @@ namespace E_Metro.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TicketType()
         {
-            this.Tickets = new HashSet<Ticket>();
+            this.MonthlyTickets = new HashSet<MonthlyTicket>();
+            this.StandarTickets = new HashSet<StandarTicket>();
+            this.TicketSolds = new HashSet<TicketSold>();
         }
     
         public int Id { get; set; }
         public string DisplayName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ticket> Tickets { get; set; }
+        public virtual ICollection<MonthlyTicket> MonthlyTickets { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StandarTicket> StandarTickets { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TicketSold> TicketSolds { get; set; }
     }
 }

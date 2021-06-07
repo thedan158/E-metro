@@ -10,11 +10,11 @@ namespace E_Metro.ViewModel
 {
     class Ticket_month : BaseViewModel
     {
-        private ObservableCollection<Ticket> _MonthList;
-        public ObservableCollection<Ticket> MonthList { get => _MonthList; set { _MonthList = value; OnPropertyChanged(); } }
+        private ObservableCollection<MonthlyTicket> _MonthList;
+        public ObservableCollection<MonthlyTicket> MonthList { get => _MonthList; set { _MonthList = value; OnPropertyChanged(); } }
         public Ticket_month()
         {
-            _MonthList = new ObservableCollection<Ticket>(DataProvider.Ins.DB.Tickets);
+            _MonthList = new ObservableCollection<MonthlyTicket>(DataProvider.Ins.DB.MonthlyTickets);
         }
 
 
