@@ -150,6 +150,9 @@
     <Compile Include="UserControlKteam\ControlBarUC.xaml.cs">
       <DependentUpon>ControlBarUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AddCompanyTrueViewModel.cs" />
+    <Compile Include="ViewModel\AddCompanyViewModel.cs" />
+    <Compile Include="ViewModel\AddStationViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\CompanyViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
