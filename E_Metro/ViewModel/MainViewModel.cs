@@ -19,7 +19,8 @@ namespace E_Metro.ViewModel
         public ICommand CompanyWindowCommand { get; set; }
         public ICommand TrafficWindowCommand { get; set; }
 
-        public string keeper = LoginViewModel.idR;     
+        public int code;
+        public bool permission;
 
         // mọi thứ xử lý sẽ nằm trong này
         public MainViewModel()
@@ -32,7 +33,7 @@ namespace E_Metro.ViewModel
                 p.Hide();
                 LoginWindow loginWindow = new LoginWindow();
                 loginWindow.ShowDialog();
-
+               
                 if (loginWindow.DataContext == null)
                     return;
                 var loginVM = loginWindow.DataContext as LoginViewModel;
@@ -47,9 +48,87 @@ namespace E_Metro.ViewModel
             }
               );
             //load window khi nhấn 1 nút nào đấy 
-            TicketWindowCommand = new RelayCommand<object>((p) => { int code = int.Parse(keeper); return true; }, (p) => { Banve wd = new Banve(); wd.ShowDialog(); });
-            CompanyWindowCommand = new RelayCommand<object>((p) => { int code = int.Parse(keeper); return true; }, (p) => { CompanyWindow wd = new CompanyWindow(); wd.ShowDialog(); });
-            TrafficWindowCommand = new RelayCommand<object>((p) => { int code = int.Parse(keeper); return true; }, (p) => { TrafficWindow wd = new TrafficWindow(); wd.ShowDialog(); });
+            TicketWindowCommand = new RelayCommand<object>((p) =>
+            {
+                code = LoginViewModel.idR;
+
+                if (code == 4)
+                {
+                    permission = true;
+                }
+                else
+                {
+                    permission = false;
+                }
+
+                return true;
+            }, 
+            (p) => 
+            {
+                if (permission == true)
+                {
+                    Banve wd = new Banve(); wd.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("You are not authorized !");
+                }
+                 
+            });
+
+            CompanyWindowCommand = new RelayCommand<object>((p) => 
+            {
+                code = LoginViewModel.idR;
+
+                if (code == 3)
+                {
+                    permission = true;
+                }
+                else
+                {
+                    permission = false;
+                }
+
+                return true;
+            }, 
+            (p) =>
+            {
+                if (permission == true)
+                {
+                    CompanyWindow wd = new CompanyWindow(); wd.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("You are not authorized !");
+                } 
+            });
+
+            TrafficWindowCommand = new RelayCommand<object>((p) => 
+            {
+                code = LoginViewModel.idR;
+
+                if (code == 2)
+                {
+                    permission = true;
+                }
+                else
+                {
+                    permission = false;
+                }
+
+                return true;
+            }, 
+            (p) => 
+            { 
+                if(permission == true)
+                {
+                    TrafficWindow wd = new TrafficWindow(); wd.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("You are not authorized !");
+                }
+            });
         }
         
     }

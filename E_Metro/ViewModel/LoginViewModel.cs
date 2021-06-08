@@ -24,7 +24,8 @@ namespace E_Metro.ViewModel
         public ICommand CloseCommand { get; set; }
         public ICommand PasswordChangedCommand { get; set; }
 
-        public static string idR;
+        public static int idR;
+        public static int idOCom;
  
 
         // mọi thứ xử lý sẽ nằm trong này
@@ -44,14 +45,27 @@ namespace E_Metro.ViewModel
                 return;
             string passEncode = CreateMD5(Base64Encode(Password));
             var accCount = DataProvider.Ins.DB.Users.Where(x => x.Username == UserName && x.Password == passEncode ).Count();
-            var sss = DataProvider.Ins.DB.Users.Where(x => x.Username == UserName && x.Password == passEncode).Select(x => x.IdRole).ToArray();
-
-            idR = sss[0].ToString();
+            
                                                             
             if (accCount > 0)
             {
+                var sss = DataProvider.Ins.DB.Users.Where(x => x.Username == UserName && x.Password == passEncode).Select(x => x.IdRole).ToArray();
+
+                idR = int.Parse(sss[0].ToString());
+                
+                if (idR == 3)
+                {
+                    var kkk = DataProvider.Ins.DB.Users.Where(x => x.Username == UserName && x.Password == passEncode).Select(x => x.CompanyID).ToArray();
+                    idOCom = int.Parse(kkk[0].ToString());
+                }
+                else
+                {
+                    idOCom = 0;
+                }
+
                 IsLogin = true;
                 Console.WriteLine("-----------" + idR);
+                Console.WriteLine("-----------" + idOCom);
                 p.Close();
             }
             else

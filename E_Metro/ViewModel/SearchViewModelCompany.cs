@@ -49,12 +49,10 @@ namespace E_Metro.ViewModel
         private ObservableCollection<int> _boxList;
         public ObservableCollection<int> boxList { get => _boxList; set { _boxList = value; OnPropertyChanged(); } }
 
-        public string keeper = LoginViewModel.idR;
+        public int code = LoginViewModel.idOCom;
 
         public SearchViewModelCompany()
-        {
-            int code = int.Parse(keeper);
-
+        {           
             myList = new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays.Where(a => a.OwnedCompanyId == code));
             
             staionList = new ObservableCollection<Station>(DataProvider.Ins.DB.Stations);
@@ -62,6 +60,8 @@ namespace E_Metro.ViewModel
             List<int> list = DataProvider.Ins.DB.Stations.Select(x => x.Id).ToList();
 
             boxList = new ObservableCollection<int>(list);
+
+            Console.WriteLine("--------" + code);
 
             EditCommand = new RelayCommand<object>((p) => 
             {

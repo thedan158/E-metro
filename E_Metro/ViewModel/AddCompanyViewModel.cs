@@ -29,6 +29,8 @@ namespace E_Metro.ViewModel
         private ObservableCollection<int> _boxList;
         public ObservableCollection<int> boxList { get => _boxList; set { _boxList = value; OnPropertyChanged(); } }
 
+        public int code = LoginViewModel.idOCom;
+
         public System.Windows.Input.ICommand AddCommand { get; set; }
         public AddCompanyViewModel()
         {
@@ -47,7 +49,7 @@ namespace E_Metro.ViewModel
                 else return false;
             }, (p) =>
             {
-                DataProvider.Ins.DB.RailWays.Add(new RailWay() { DisplayName = DisplayName , DepartureID = IdLStation, DestinationID = IdAStation, Price = SPrice, OwnedCompanyId=1});
+                DataProvider.Ins.DB.RailWays.Add(new RailWay() { DisplayName = DisplayName , DepartureID = IdLStation, DestinationID = IdAStation, Price = SPrice, OwnedCompanyId=code});
                 DataProvider.Ins.DB.SaveChanges();
 
                 
