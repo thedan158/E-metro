@@ -69,8 +69,7 @@ namespace E_Metro.ViewModel
             {
                 DataProvider.Ins.DB.Companies.Add(new Company { DisplayName = DisplayName, Website = Website, Address = Address, Phone = Phone});
                 DataProvider.Ins.DB.SaveChanges();
-
-
+                
             });
 
         }

@@ -6,26 +6,34 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace E_Metro.ViewModel
 {
     class CompanyViewModel : BaseViewModel
     {
-        private ObservableCollection<RailWay> _myList;
-        public ObservableCollection<RailWay> myList { get => _myList; set { _myList = value; OnPropertyChanged(); } }
+
+        public static ObservableCollection<RailWay> myList { get; set; }
         private ObservableCollection<Station> _staionList;
         public ObservableCollection<Station> staionList { get => _staionList; set { _staionList = value; OnPropertyChanged(); } }
 
         public int code = LoginViewModel.idOCom;
 
+        public ICommand ResetCommand;
+
 
         public CompanyViewModel()
-        {   
-            if (code != 0)
-            {                
-                myList = new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays.Where(a => a.OwnedCompanyId == code));
-                staionList = new ObservableCollection<Station>(DataProvider.Ins.DB.Stations);
-            }
+        {
+
+            myList = new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays.Where(a => a.OwnedCompanyId == code));
+
+            staionList = new ObservableCollection<Station>(DataProvider.Ins.DB.Stations);
+
+            ResetCommand = new RelayCommand<Object>((p) => { return true; }, (p) => {
+
+                
+            });
+
         }
     }
 }

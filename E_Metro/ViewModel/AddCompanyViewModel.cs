@@ -49,10 +49,11 @@ namespace E_Metro.ViewModel
                 else return false;
             }, (p) =>
             {
-                DataProvider.Ins.DB.RailWays.Add(new RailWay() { DisplayName = DisplayName , DepartureID = IdLStation, DestinationID = IdAStation, Price = SPrice, OwnedCompanyId=code});
+                var objects = new RailWay() { DisplayName = DisplayName, DepartureID = IdLStation, DestinationID = IdAStation, Price = SPrice, OwnedCompanyId = code };
+                DataProvider.Ins.DB.RailWays.Add(objects);
                 DataProvider.Ins.DB.SaveChanges();
 
-                
+                CompanyViewModel.myList.Add(objects);
             });
             
         }

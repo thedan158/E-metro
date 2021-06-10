@@ -79,7 +79,7 @@
                     <ComboBox
                         materialDesign:HintAssist.Hint="Ga đi"
                         ItemsSource="{Binding boxList}"
-                        SelectedItem="{Binding IdAStation}"
+                        SelectedItem="{Binding IdLStation}"
                         Margin="8 0 0 0">
                     </ComboBox>
                 </Grid>
