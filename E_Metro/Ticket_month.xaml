@@ -21,6 +21,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         ResizeMode="NoResize"
         WindowStyle="None"
         DataContext="{StaticResource TicketmonthVM}"
+     
         WindowStartupLocation="CenterScreen"
         Name="ticket_month"
          Title="Ticket_month" Height="450" Width="800">
@@ -29,46 +30,39 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         <Grid Grid.Row="0">
             <uc:ControlBarUC Tag="{Binding Title, ElementName=ticket_month}"></uc:ControlBarUC>
         </Grid>
-        <WrapPanel>
+        <WrapPanel >
             <StackPanel Width="400">
-                <GroupBox Header="Thông tin khách hàng" >
+                <GroupBox Header="Thông tin khách hàng" Height="153" >
                     <WrapPanel >
-                        <StackPanel>
+                        <StackPanel MaxWidth="200" MinWidth="150">
                             <Label>Tên khách hàng</Label>
                             <Label>CMND</Label>
-                            <Label>Mã KH</Label>
                             <Label>Số điện thoại</Label>
                         </StackPanel>
                         <StackPanel>
-                            <TextBox Height="25" Width="150" ></TextBox>
-                            <TextBox  Height="25"  Width="150"></TextBox>
-                            <TextBox  Height="25" Width="150" ></TextBox>
-                            <TextBox  Height="25" Width="150" ></TextBox>
+                            <TextBox Height="25" Width="150" Text="{Binding SName}"></TextBox>
+                            <TextBox  Height="25"  Width="150" Text="{Binding SCm}"></TextBox>
+                            <TextBox  Height="25" Width="150" Text="{Binding Sphone}"></TextBox>
+
                         </StackPanel>
                     </WrapPanel>
                 </GroupBox>
             </StackPanel>
             <StackPanel Width="400">
-                <GroupBox Header="Thông tin đặt vé" Width="400" >
+                <GroupBox Header="Thông tin đặt vé" Width="400" Height="153" >
                     <WrapPanel>
-                        <StackPanel>
+                        <StackPanel MaxWidth="200" MinWidth="150">
                             <Label>Mã tuyến</Label>
-                            <Label>Mã vé</Label>
-                            <Label>Giờ đi</Label>
-                            <Label>Ga đi</Label>
+                            <Label>Ngày bắt đầu</Label>
+                            <Label>Ngày kết thúc</Label>
                         </StackPanel>
                         <StackPanel>
-                            <TextBox     Height="25" Width="80" IsReadOnly="True"></TextBox>
-                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
-                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
-                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
+                            <TextBox   Height="25" Width="150" Text="{Binding RId}" ></TextBox>
+                            <TextBox   Height="25" Width="150" Text="{Binding MStart}"  ></TextBox>
+                            <TextBox   Height="25" Width="150" Text="{Binding MEnd}"  ></TextBox>
                         </StackPanel>
-                        <StackPanel>
-                            <Label>Ga đến</Label>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBox   Height="25" Width="80" IsReadOnly="True"></TextBox>
-                        </StackPanel>
+
+
                     </WrapPanel>
                 </GroupBox>
             </StackPanel>
@@ -77,21 +71,24 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
         <WrapPanel Margin="0,20,0,0" Height="280">
             <Grid Width="590" Height="332" HorizontalAlignment="Left" >
-                <DataGrid Grid.Column="0" ItemsSource="{Binding MonthList }" AutoGenerateColumns="False" IsReadOnly="True" >
+                <DataGrid Grid.Column="0" ItemsSource="{Binding MonthList }" AutoGenerateColumns="False" SelectedItem="{Binding SelectedItem}" Margin="10,-15,0,0" Height="347" VerticalAlignment="Bottom" >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Mã vé" Binding="{Binding Id}"/>
                         <DataGridTextColumn Header="Mã tuyến" Binding="{Binding RailwayID}"/>
-                        <DataGridTextColumn Header="Ga đi"/>
-                        <DataGridTextColumn Header="Ga đến"/>
-                        <DataGridTextColumn Header="Giờ đi"/>
-                        <DataGridTextColumn Header="Giá vé" />
+                        <DataGridTextColumn Header="Ga đi" Binding="{Binding RailWay.DepartureID}"/>
+                        <DataGridTextColumn Header="Ga đến"  Binding="{Binding RailWay.DestinationID}"/>
+                        <DataGridTextColumn Header="Ngày bắt đầu"  Binding="{Binding StartDate}"/>
+                        <DataGridTextColumn Header="Ngày kết thúc"  Binding="{Binding ExpireDate}"/>
+                        <DataGridTextColumn Header="Giá vé"  Binding="{Binding RailWay.Price}"/>
                     </DataGrid.Columns>
                 </DataGrid>
 
             </Grid>
             <Grid>
-                <Button Height="53" Width="80" Content="Chọn"  Margin="10,110,-10,117" />
-                <Button Height="53" Width="80" Content="In"  Margin="100,110,-100,117" />
+                <Button Height="Auto" Content="Lưu"  Margin="70,12,-155,215" Command="{Binding Savebtn}" />
+                <Button Height="Auto" Content="Sửa"  Margin="70,82,-155,145" Command="{Binding Updatebtn}" />
+                <Button Height="Auto" Content="Xóa"  Margin="70,155,-155,72" Command="{Binding Clearbtn}" />
+
             </Grid>
 
 
