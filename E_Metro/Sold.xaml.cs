@@ -15,24 +15,15 @@ using System.Windows.Shapes;
 namespace E_Metro
 {
     /// <summary>
-    /// Interaction logic for Banve.xaml
+    /// Interaction logic for Sold.xaml
     /// </summary>
-    public partial class Banve : Window
+    public partial class Sold : Window
     {
-        public Banve()
+        public Sold()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Ticket_month wd = new Ticket_month();
-            wd.ShowDialog();
-        }
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Sold wd = new Sold();
-            wd.ShowDialog();
-        }
+        
     }
 }

@@ -147,6 +147,9 @@
     <Compile Include="SearchWindowTraffic2.xaml.cs">
       <DependentUpon>SearchWindowTraffic2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sold.xaml.cs">
+      <DependentUpon>Sold.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ticket_month.xaml.cs">
       <DependentUpon>Ticket_month.xaml</DependentUpon>
     </Compile>
@@ -167,6 +170,7 @@
     <Compile Include="ViewModel\SearchViewModelCompany.cs" />
     <Compile Include="ViewModel\SearchViewModelTraffic1.cs" />
     <Compile Include="ViewModel\SearchViewModelTraffic2.cs" />
+    <Compile Include="ViewModel\Sold.cs" />
     <Compile Include="ViewModel\Ticket_day.cs" />
     <Compile Include="ViewModel\Ticket_month.cs" />
     <Compile Include="ViewModel\TrafficViewModel.cs" />
@@ -219,6 +223,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SearchWindowTraffic2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sold.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
