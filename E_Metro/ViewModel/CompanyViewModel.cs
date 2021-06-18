@@ -25,14 +25,20 @@ namespace E_Metro.ViewModel
         public CompanyViewModel()
         {
 
-            myList = new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays.Where(a => a.OwnedCompanyId == code));
+            if (code != 0)
+            {
+                myList = new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays.Where(a => a.OwnedCompanyId == code));
 
-            staionList = new ObservableCollection<Station>(DataProvider.Ins.DB.Stations);
+                staionList = new ObservableCollection<Station>(DataProvider.Ins.DB.Stations);
+            }
+            else
+            {
+                myList = new ObservableCollection<RailWay>(DataProvider.Ins.DB.RailWays);
 
-            ResetCommand = new RelayCommand<Object>((p) => { return true; }, (p) => {
+                staionList = new ObservableCollection<Station>(DataProvider.Ins.DB.Stations);
+            }
 
-                
-            });
+
 
         }
     }

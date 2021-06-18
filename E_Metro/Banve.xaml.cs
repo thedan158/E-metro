@@ -34,5 +34,11 @@ namespace E_Metro
             Sold wd = new Sold();
             wd.ShowDialog();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            InfoStation wd = new InfoStation();
+            wd.ShowDialog();
+        }
     }
 }

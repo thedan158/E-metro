@@ -15,19 +15,15 @@ using System.Windows.Shapes;
 namespace E_Metro
 {
     /// <summary>
-    /// Interaction logic for Ticket_month.xaml
+    /// Interaction logic for InfoStation.xaml
     /// </summary>
-    public partial class Ticket_month : Window
+    public partial class InfoStation : Window
     {
-        public Ticket_month()
+        public InfoStation()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            InfoStation wd = new InfoStation();
-            wd.ShowDialog();
-        }
+    
     }
 }

@@ -15,4 +15,5 @@
     <viewmodel:AddCompanyTrueViewModel x:Key="AddCompanyTrueVM"></viewmodel:AddCompanyTrueViewModel>
     <viewmodel:AddStationViewModel x:Key="AddStationVM"></viewmodel:AddStationViewModel>
     <viewmodel:Sold x:Key="SoldVM"></viewmodel:Sold>
+    <viewmodel:StationInfo x:Key="SInfoVM"></viewmodel:StationInfo>
 </ResourceDictionary>

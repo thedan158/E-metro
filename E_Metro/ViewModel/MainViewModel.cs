@@ -52,7 +52,7 @@ namespace E_Metro.ViewModel
             {
                 code = LoginViewModel.idR;
 
-                if (code == 4)
+                if (code == 4 || code == 1)
                 {
                     permission = true;
                 }
@@ -80,7 +80,7 @@ namespace E_Metro.ViewModel
             {
                 code = LoginViewModel.idR;
 
-                if (code == 3)
+                if (code == 3 || code == 1)
                 {
                     permission = true;
                 }
@@ -107,7 +107,7 @@ namespace E_Metro.ViewModel
             {
                 code = LoginViewModel.idR;
 
-                if (code == 2)
+                if (code == 2 || code == 1)
                 {
                     permission = true;
                 }
