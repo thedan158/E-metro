@@ -124,7 +124,7 @@
                                     </GridViewColumn>
 
                                     <GridViewColumn
-                                    DisplayMemberBinding="{Binding RailWay.Price}"
+                                    DisplayMemberBinding="{Binding Price}"
                                     Header="Giá">
                                     </GridViewColumn>
 

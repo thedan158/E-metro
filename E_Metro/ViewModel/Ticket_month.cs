@@ -53,14 +53,13 @@ namespace E_Metro.ViewModel
                 if (SelectedItem != null)
                 {
                     RId = SelectedItem.RailwayID;
-                    RGo = SelectedItem.RailWay.DepartureID;
-                    REnd = SelectedItem.RailWay.DestinationID;
                     SName = SelectedItem.ClientName;
                     SCm = SelectedItem.CLientIdentity;
                     IdT = SelectedItem.IdType;
                     MEnd = SelectedItem.ExpireDate;
                     MStart = SelectedItem.StartDate;
                     Sphone = SelectedItem.Phone;
+                    RPrice = SelectedItem.Price;
                 }
             }
         }
@@ -71,6 +70,23 @@ namespace E_Metro.ViewModel
         public Ticket_month()
         {
             _MonthList = new ObservableCollection<MonthlyTicket>(DataProvider.Ins.DB.MonthlyTickets);
+            Clearbtn = new RelayCommand<object>((p) =>
+            {
+        
+                return true;
+
+            }, (p) =>
+            {
+                decimal?[] tam = DataProvider.Ins.DB.RailWays.Where(x => x.Id == RId).Select(x => x.Price).ToArray();
+
+                RPrice = tam[0] * 20;
+
+                Console.WriteLine("gia " + tam[0]);
+
+               
+               
+
+            });
             Savebtn = new RelayCommand<object>((p) =>
             {
                 if (string.IsNullOrEmpty(SCm))
@@ -87,6 +103,7 @@ namespace E_Metro.ViewModel
 
             }, (p) =>
             {
+
                 var month = new MonthlyTicket()
                 {
                     ClientName = SName,
@@ -95,7 +112,8 @@ namespace E_Metro.ViewModel
                     RailwayID = RId,
                     ExpireDate = MEnd,
                     StartDate = MStart,
-                    IdType = (int)2
+                    IdType = (int)2,
+                    Price = RPrice
 
                 };
 
