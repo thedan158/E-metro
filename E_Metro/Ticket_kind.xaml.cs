@@ -23,5 +23,11 @@ namespace E_Metro
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            InfoStation wd = new InfoStation();
+            wd.ShowDialog();
+        }
     }
 }

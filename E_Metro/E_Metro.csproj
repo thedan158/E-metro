@@ -90,6 +90,9 @@
     <Compile Include="CompanyWindow.xaml.cs">
       <DependentUpon>CompanyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InfoStation.xaml.cs">
+      <DependentUpon>InfoStation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,17 @@
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+<<<<<<< Updated upstream
+=======
+    <Compile Include="ViewModel\SearchViewModelCompany.cs" />
+    <Compile Include="ViewModel\SearchViewModelTraffic1.cs" />
+    <Compile Include="ViewModel\SearchViewModelTraffic2.cs" />
+    <Compile Include="ViewModel\Sold.cs" />
+    <Compile Include="ViewModel\StationInfo.cs" />
+    <Compile Include="ViewModel\Ticket_day.cs" />
+    <Compile Include="ViewModel\Ticket_month.cs" />
+    <Compile Include="ViewModel\TrafficViewModel.cs" />
+>>>>>>> Stashed changes
     <Page Include="AddWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,6 +187,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CompanyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoStation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -42,9 +42,93 @@ namespace E_Metro.ViewModel
             }
               );
             //load window khi nhấn 1 nút nào đấy 
+<<<<<<< Updated upstream
             TicketWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => { Banve wd = new Banve(); wd.ShowDialog(); });
             CompanyWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CompanyWindow wd = new CompanyWindow(); wd.ShowDialog(); });
             TrafficWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => { TrafficWindow wd = new TrafficWindow(); wd.ShowDialog(); });
+=======
+            TicketWindowCommand = new RelayCommand<object>((p) =>
+            {
+                code = LoginViewModel.idR;
+
+                if (code == 4 || code == 1)
+                {
+                    permission = true;
+                }
+                else
+                {
+                    permission = false;
+                }
+
+                return true;
+            }, 
+            (p) => 
+            {
+                if (permission == true)
+                {
+                    Banve wd = new Banve(); wd.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("You are not authorized !");
+                }
+                 
+            });
+
+            CompanyWindowCommand = new RelayCommand<object>((p) => 
+            {
+                code = LoginViewModel.idR;
+
+                if (code == 3 || code == 1)
+                {
+                    permission = true;
+                }
+                else
+                {
+                    permission = false;
+                }
+
+                return true;
+            }, 
+            (p) =>
+            {
+                if (permission == true)
+                {
+                    CompanyWindow wd = new CompanyWindow(); wd.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("You are not authorized !");
+                } 
+            });
+
+            TrafficWindowCommand = new RelayCommand<object>((p) => 
+            {
+                code = LoginViewModel.idR;
+
+                if (code == 2 || code == 1)
+                {
+                    permission = true;
+                }
+                else
+                {
+                    permission = false;
+                }
+
+                return true;
+            }, 
+            (p) => 
+            { 
+                if(permission == true)
+                {
+                    TrafficWindow wd = new TrafficWindow(); wd.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("You are not authorized !");
+                }
+            });
+>>>>>>> Stashed changes
         }
     }
 }

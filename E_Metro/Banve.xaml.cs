@@ -23,5 +23,25 @@ namespace E_Metro
         {
             InitializeComponent();
         }
+<<<<<<< Updated upstream
+=======
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Ticket_month wd = new Ticket_month();
+            wd.ShowDialog();
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Sold wd = new Sold();
+            wd.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            InfoStation wd = new InfoStation();
+            wd.ShowDialog();
+        }
+>>>>>>> Stashed changes
     }
 }

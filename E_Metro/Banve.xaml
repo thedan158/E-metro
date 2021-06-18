@@ -19,11 +19,24 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Name="banVe"
+<<<<<<< Updated upstream
         Title="Banve" Height="450" Width="800">
     <StackPanel>
+=======
+        
+        Title="Banve" Height="700" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+>>>>>>> Stashed changes
         <Grid Grid.Row="0">
             <uc:ControlBarUC Tag="{Binding Title, ElementName=banVe}"></uc:ControlBarUC>
         </Grid>
+<<<<<<< Updated upstream
         <WrapPanel>
             <StackPanel Width="400">
                 <GroupBox Header="Thông tin khách hàng" >
@@ -80,9 +93,95 @@
                         <DataGridTextColumn Header="Ga đến"/>
                         <DataGridTextColumn Header="Giờ đi"/>
                         <DataGridTextColumn Header="Giá vé" />
+=======
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <GroupBox Header="Thông tin đặt vé" Margin="0,0,2.6,-0.4" FontSize="22" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="1.3*"></ColumnDefinition>
+                                <ColumnDefinition ></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Width="125" Height="150" >
+                                <Label Height="50">Mã tuyến</Label>
+                                <Label Height="50">Mã vé</Label>
+                                <Label Height="50">Ngày đi</Label>
+                            </StackPanel>
+                            <StackPanel Width="155" Grid.Column="1">
+                                <TextBox   Height="30" Text="{Binding RId}" IsReadOnly="True"  />
+                                <TextBox   Height="50" Text="{Binding TId}" IsReadOnly="True"/>
+                                <TextBox   Height="50"  Text="{Binding TDate}"  IsReadOnly="True"/>
+
+                            </StackPanel>
+                            <StackPanel Height="150" Grid.Column="2" >
+                                <Label Height="50" Margin="28,0,-0.4,0">Giờ đi</Label>
+                                <Label Height="50" Margin="28,0,-0.4,0">Ga đi</Label>
+                                <Label Height="50" Margin="28,0,-0.4,0">Ga dến</Label>
+                            </StackPanel>
+                            <StackPanel  Width="155" Grid.Column="3" >
+                                <TextBox    Height="30" Width="180" Text="{Binding THour}" IsReadOnly="True"></TextBox>
+                                <TextBox    Height="50" Width="180" Text="{Binding RGo}" IsReadOnly="True"></TextBox>
+                                <TextBox    Height="50" Width="180" Text="{Binding REnd}" IsReadOnly="True"></TextBox>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+                <Grid Grid.Column="1">
+
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label FontSize="72" FontFamily="Dubai Medium"  Grid.Row="0" Content="  Giá Vé" Margin="29,0,0,0.4" Height="110" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="255" />
+                        <TextBlock
+                                   Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                                   Text="{Binding RPrice}" Height="92" FontSize="55" Margin="0,0,-0.4,8.8" TextAlignment="Center" HorizontalAlignment="Right" Width="334" VerticalAlignment="Bottom" Grid.Row="1"  />
+
+                    </Grid>
+
+
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3.*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <DataGrid Grid.Column="0" ItemsSource="{Binding DayList}" AutoGenerateColumns="False" SelectedValue="{Binding SelectedItem}" FontSize="12" Margin="10,0,0.4,0.4" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Mã tuyến" Binding="{Binding RailwayID}"/>
+                        <DataGridTextColumn Header="Mã vé" Binding="{Binding Id}"/>
+                        <DataGridTextColumn Header="Ga đi" Binding="{Binding RailWay.DepartureID}"/>
+                        <DataGridTextColumn Header="Ga đến" Binding="{Binding RailWay.DestinationID}"/>
+                        <DataGridTextColumn Header="Ngày đi" Binding="{Binding DepartDate}"/>
+                        <DataGridTextColumn Header="Giờ đi" Binding="{Binding DepartHour}"/>
+                        <DataGridTextColumn Header="Giá vé" Binding="{Binding RailWay.Price}"/>
+>>>>>>> Stashed changes
                     </DataGrid.Columns>
                 </DataGrid>
+<<<<<<< Updated upstream
 
+=======
+                <Grid Grid.Column="1">
+                    <Button Content="Save"    FontSize="20"  Command="{Binding Savebtn}" VerticalAlignment="Top"  Margin="65,10,64.6,0"  Height="76" />
+                    <Button Content="Month"   FontSize="20" Click="Button_Click"         VerticalAlignment="Top"  Margin="65,116,64.6,0" Height="76"/>
+                    <Button Content="Sold"    FontSize="20" Click="Button_Click_1"       VerticalAlignment="Top"  Margin="65,227,64.6,0" Height="76" />
+                    <Button Content="Station" FontSize="20" Click="Button_Click_2"       VerticalAlignment="Top"  Margin="65,336,64.6,0" Height="76"  />
+                </Grid>
+>>>>>>> Stashed changes
             </Grid>
             <Grid>
                 <Button Height="53" Width="80" Content="Chọn"  Margin="10,110,-10,117" />
