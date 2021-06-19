@@ -77,7 +77,10 @@ namespace E_Metro.ViewModel
 
             }, (p) =>
             {               
-                DataProvider.Ins.DB.MonthlyTickets.Remove(SelectedItem);                       
+                DataProvider.Ins.DB.MonthlyTickets.Remove(SelectedItem);
+                DataProvider.Ins.DB.SaveChanges();
+
+                MonthList.Remove(SelectedItem);
             });
 
             Savebtn = new RelayCommand<object>((p) =>
