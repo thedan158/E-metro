@@ -65,7 +65,7 @@ namespace E_Metro.ViewModel
         public Ticket_day()
         {
 
-            DayList = new ObservableCollection<StandarTicket>(DataProvider.Ins.DB.StandarTickets);
+            _DayList = new ObservableCollection<StandarTicket>(DataProvider.Ins.DB.StandarTickets);
 
             Savebtn = new RelayCommand<object>((p) =>
             {
@@ -79,11 +79,10 @@ namespace E_Metro.ViewModel
 
             }, (p) =>
             {
-                var sold = new TicketSold() { RailwayID = RId, Id = TId, IdType = IdT };
+                var Sold = new TicketSold() { RailwayID = RId, Id = TId, IdType = IdT };
 
-                DataProvider.Ins.DB.TicketSolds.Add(sold);
+                DataProvider.Ins.DB.TicketSolds.Add(Sold);
                 DataProvider.Ins.DB.SaveChanges();
-                Sold.DayList.Add(sold);
 
             });
 
