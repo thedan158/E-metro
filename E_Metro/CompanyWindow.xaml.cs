@@ -20,6 +20,7 @@ namespace E_Metro
     /// </summary>
     public partial class CompanyWindow : Window
     {
+        public int code;
 
         public CompanyWindow()
         {
@@ -36,13 +37,19 @@ namespace E_Metro
        
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            AddWindow wd = new AddWindow();
-            wd.ShowDialog();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {           
+            code = LoginViewModel.idR;
+            if(code == 1)
+            {
+                MessageBox.Show("You are not authorized !");
+            }
+            else
+            {
+                AddWindow wd = new AddWindow();
+                wd.ShowDialog();
+            }
             
         }
+
+        
     }
 }
