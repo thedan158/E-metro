@@ -14,12 +14,11 @@ namespace E_Metro.ViewModel
     {
 
         public static ObservableCollection<RailWay> myList { get; set; }
+
         private ObservableCollection<Station> _staionList;
         public ObservableCollection<Station> staionList { get => _staionList; set { _staionList = value; OnPropertyChanged(); } }
 
-        public int code = LoginViewModel.idOCom;
-
-        public ICommand ResetCommand;
+        public int code = LoginViewModel.idOCom;       
 
 
         public CompanyViewModel()

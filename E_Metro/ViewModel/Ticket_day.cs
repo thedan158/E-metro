@@ -80,12 +80,14 @@ namespace E_Metro.ViewModel
 
             }, (p) =>
             {
-                var Sold = new TicketSold() { RailwayID = RId, Id = TId, IdType = IdT };
+                TicketSold sold = new TicketSold() { RailwayID = RId, Id = TId, IdType = IdT };
+                
 
-                DataProvider.Ins.DB.TicketSolds.Add(Sold);
+                DataProvider.Ins.DB.TicketSolds.Add(sold);
                 DataProvider.Ins.DB.SaveChanges();
+                
 
-                MessageBox.Show("Ticket is sole !");
+                MessageBox.Show("Ticket is sole !");               
 
             });
 

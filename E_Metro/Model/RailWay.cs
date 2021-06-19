@@ -9,10 +9,11 @@
 
 namespace E_Metro.Model
 {
+    using E_Metro.ViewModel;
     using System;
     using System.Collections.Generic;
     
-    public partial class RailWay
+    public partial class RailWay : BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RailWay()
@@ -23,12 +24,17 @@ namespace E_Metro.Model
         }
     
         public int Id { get; set; }
-        public string DisplayName { get; set; }
-        public Nullable<int> DepartureID { get; set; }
-        public Nullable<int> DestinationID { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public int OwnedCompanyId { get; set; }
-    
+        private string _DisplayName;
+        public string DisplayName { get => _DisplayName; set { _DisplayName = value; OnPropertyChanged(); } }
+        private Nullable<int> _DerpatureID;
+        public Nullable<int> DepartureID { get => _DerpatureID; set { _DerpatureID = value; OnPropertyChanged(); } }
+        private Nullable<int> _DestinationID;
+        public Nullable<int> DestinationID { get => _DestinationID; set { _DestinationID = value; OnPropertyChanged(); } }
+        private Nullable<decimal> _Price;
+        public Nullable<decimal> Price { get => _Price; set { _Price = value; OnPropertyChanged(); } }
+        private int _OwnedComapnyId;
+        public int OwnedCompanyId { get => _OwnedComapnyId; set { _OwnedComapnyId = value; OnPropertyChanged(); } }
+
         public virtual Company Company { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MonthlyTicket> MonthlyTickets { get; set; }

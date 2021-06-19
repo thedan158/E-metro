@@ -55,10 +55,11 @@ namespace E_Metro.ViewModel
                 else return false;
             }, (p) =>
             {
-                DataProvider.Ins.DB.Stations.Add(new Station { DisplayName = DisplayName, Address = Address, Status = Status });
+                var object2 = new Station { DisplayName = DisplayName, Address = Address, Status = Status };
+                DataProvider.Ins.DB.Stations.Add(object2);
                 DataProvider.Ins.DB.SaveChanges();
 
-
+                TrafficViewModel.myList2.Add(object2);
             });
 
         }

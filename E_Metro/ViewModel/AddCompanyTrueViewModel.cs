@@ -67,9 +67,11 @@ namespace E_Metro.ViewModel
                 else return false;
             }, (p) =>
             {
-                DataProvider.Ins.DB.Companies.Add(new Company { DisplayName = DisplayName, Website = Website, Address = Address, Phone = Phone});
+                var object1 = new Company { DisplayName = DisplayName, Website = Website, Address = Address, Phone = Phone };
+                DataProvider.Ins.DB.Companies.Add(object1);
                 DataProvider.Ins.DB.SaveChanges();
-                
+
+                TrafficViewModel.myList1.Add(object1);
             });
 
         }

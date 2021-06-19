@@ -55,13 +55,13 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                             <Label>Mã tuyến</Label>
                             <Label>Ngày bắt đầu</Label>
                             <Label>Ngày kết thúc</Label>
-                            <Label>Giá</Label>
+                            
                         </StackPanel>
                         <StackPanel>
                             <TextBox   Height="25" Width="150" Text="{Binding RId}" ></TextBox>
                             <TextBox   Height="25" Width="150" Text="{Binding MStart}"  ></TextBox>
                             <TextBox   Height="25" Width="150" Text="{Binding MEnd}"  ></TextBox>
-                            <TextBox   Height="25" Width="150" Text="{Binding RPrice}"  />
+                            
                         </StackPanel>
 
 

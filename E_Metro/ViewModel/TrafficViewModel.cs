@@ -10,10 +10,10 @@ namespace E_Metro.ViewModel
 {
     class TrafficViewModel : BaseViewModel
     {
-        private ObservableCollection<Company> _myList1;
-        public ObservableCollection<Company> myList1 { get => _myList1; set { _myList1 = value; OnPropertyChanged(); } }
-        private ObservableCollection<Station> _myList2;
-        public ObservableCollection<Station> myList2 { get => _myList2; set { _myList2 = value; OnPropertyChanged(); } }
+        
+        public static ObservableCollection<Company> myList1 { get; set; }
+        
+        public static ObservableCollection<Station> myList2 { get; set; }
 
         public TrafficViewModel()
         {
