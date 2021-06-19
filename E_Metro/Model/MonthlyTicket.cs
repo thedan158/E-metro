@@ -29,7 +29,7 @@ namespace E_Metro.Model
         public string StartDate { get; set; }
         public string ExpireDate { get; set; }
         public Nullable<decimal> Price { get; set; }
-
+    
         public virtual TicketType TicketType { get; set; }
         public virtual RailWay RailWay { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

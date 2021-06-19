@@ -10,17 +10,14 @@ namespace E_Metro.ViewModel
 {
     class Sold : BaseViewModel
     {
-        private ObservableCollection<TicketSold> _DayList;
-        public ObservableCollection<TicketSold> DayList { get => _DayList; set { _DayList = value; OnPropertyChanged(); } }
+        public static ObservableCollection<TicketSold> DayList { get; set; }
 
-        private ObservableCollection<MonthlyTicket> _MonthList;
-        public ObservableCollection<MonthlyTicket> MonthList { get => _MonthList; set { _MonthList = value; OnPropertyChanged(); } }
+        public static ObservableCollection<MonthlyTicket> MonthList { get; set; }
 
         public Sold()
         {
-
-            _DayList = new ObservableCollection<TicketSold>(DataProvider.Ins.DB.TicketSolds);
-            _MonthList = new ObservableCollection<MonthlyTicket>(DataProvider.Ins.DB.MonthlyTickets);
+            DayList = new ObservableCollection<TicketSold>(DataProvider.Ins.DB.TicketSolds);
+            MonthList = new ObservableCollection<MonthlyTicket>(DataProvider.Ins.DB.MonthlyTickets);
         }
     }
 }

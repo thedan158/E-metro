@@ -69,23 +69,20 @@ namespace E_Metro.ViewModel
 
         public Ticket_month()
         {
-            _MonthList = new ObservableCollection<MonthlyTicket>(DataProvider.Ins.DB.MonthlyTickets);
+            MonthList = new ObservableCollection<MonthlyTicket>(DataProvider.Ins.DB.MonthlyTickets);
             Clearbtn = new RelayCommand<object>((p) =>
             {
-        
-                return true;
+                if (SelectedItem != null)
+                    return true;
+                else
+                    return false;
 
             }, (p) =>
             {
-                decimal?[] tam = DataProvider.Ins.DB.RailWays.Where(x => x.Id == RId).Select(x => x.Price).ToArray();
+                DataProvider.Ins.DB.MonthlyTickets.Remove(SelectedItem);
+                DataProvider.Ins.DB.SaveChanges();
 
-                RPrice = tam[0] * 20;
-
-                Console.WriteLine("gia " + tam[0]);
-
-               
-               
-
+                MonthList.Remove(SelectedItem);
             });
             Savebtn = new RelayCommand<object>((p) =>
             {
@@ -103,6 +100,9 @@ namespace E_Metro.ViewModel
 
             }, (p) =>
             {
+                decimal?[] tam = DataProvider.Ins.DB.RailWays.Where(x => x.Id == RId).Select(x => x.Price).ToArray();
+
+                RPrice = tam[0] * 20;
 
                 var month = new MonthlyTicket()
                 {
@@ -119,8 +119,8 @@ namespace E_Metro.ViewModel
 
                 DataProvider.Ins.DB.MonthlyTickets.Add(month);
                 DataProvider.Ins.DB.SaveChanges();
-                _MonthList.Add(month);
-
+                MonthList.Add(month);
+                OnPropertyChanged("MonthList");
             });
             Updatebtn = new RelayCommand<object>((p) =>
             {
