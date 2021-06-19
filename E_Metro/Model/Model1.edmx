@@ -557,7 +557,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EMetroEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EMetroEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Companies" EntityType="Self.Company" />
           <EntitySet Name="MonthlyTickets" EntityType="Self.MonthlyTicket" />
           <EntitySet Name="RailWays" EntityType="Self.RailWay" />
@@ -621,7 +621,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EMetroModelStoreContainer" CdmEntityContainer="EMetroEntities3">
+        <EntityContainerMapping StorageEntityContainer="EMetroModelStoreContainer" CdmEntityContainer="EMetroEntities2">
           <EntitySetMapping Name="Companies">
             <EntityTypeMapping TypeName="EMetroModel.Company">
               <MappingFragment StoreEntitySet="Company">

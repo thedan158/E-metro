@@ -9,11 +9,10 @@
 
 namespace E_Metro.Model
 {
-    using E_Metro.ViewModel;
     using System;
     using System.Collections.Generic;
     
-    public partial class StandarTicket : BaseViewModel
+    public partial class StandarTicket
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StandarTicket()
@@ -22,12 +21,9 @@ namespace E_Metro.Model
         }
     
         public int Id { get; set; }
-        private Nullable<int> _RailwayID;
-        public Nullable<int> RailwayID { get => _RailwayID; set { _RailwayID = value; OnPropertyChanged(); } }
-        private Nullable<System.DateTime> _DepartDate;
-        public Nullable<System.DateTime> DepartDate { get => _DepartDate; set { _DepartDate = value; OnPropertyChanged(); } }
-        private Nullable<System.TimeSpan> _DepartHour;
-        public Nullable<System.TimeSpan> DepartHour { get => _DepartHour; set { _DepartHour = value; OnPropertyChanged(); } }
+        public Nullable<int> RailwayID { get; set; }
+        public Nullable<System.DateTime> DepartDate { get; set; }
+        public Nullable<System.TimeSpan> DepartHour { get; set; }
         public Nullable<int> IdType { get; set; }
     
         public virtual RailWay RailWay { get; set; }
