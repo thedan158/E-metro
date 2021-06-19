@@ -14,12 +14,6 @@ namespace E_Metro.Model
     
     public partial class MonthlyTicket
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MonthlyTicket()
-        {
-            this.TicketSolds = new HashSet<TicketSold>();
-        }
-    
         public int Id { get; set; }
         public Nullable<int> IdType { get; set; }
         public Nullable<int> RailwayID { get; set; }
@@ -29,10 +23,8 @@ namespace E_Metro.Model
         public string StartDate { get; set; }
         public string ExpireDate { get; set; }
         public Nullable<decimal> Price { get; set; }
-
+    
         public virtual TicketType TicketType { get; set; }
         public virtual RailWay RailWay { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TicketSold> TicketSolds { get; set; }
     }
 }

@@ -19,7 +19,6 @@ namespace E_Metro.Model
         public Nullable<int> RailwayID { get; set; }
         public Nullable<int> IdType { get; set; }
     
-        public virtual MonthlyTicket MonthlyTicket { get; set; }
         public virtual RailWay RailWay { get; set; }
         public virtual StandarTicket StandarTicket { get; set; }
         public virtual TicketType TicketType { get; set; }
