@@ -70,15 +70,16 @@ namespace E_Metro.ViewModel
         public Ticket_month()
         {
             _MonthList = new ObservableCollection<MonthlyTicket>(DataProvider.Ins.DB.MonthlyTickets);
+
             Clearbtn = new RelayCommand<object>((p) =>
-            {
-        
+            {        
                 return true;
 
             }, (p) =>
-            {
-                                             
+            {               
+                DataProvider.Ins.DB.MonthlyTickets.Remove(SelectedItem);                       
             });
+
             Savebtn = new RelayCommand<object>((p) =>
             {
                 if (string.IsNullOrEmpty(SCm))

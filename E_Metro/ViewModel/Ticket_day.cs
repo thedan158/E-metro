@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace E_Metro.ViewModel
@@ -83,6 +84,8 @@ namespace E_Metro.ViewModel
 
                 DataProvider.Ins.DB.TicketSolds.Add(Sold);
                 DataProvider.Ins.DB.SaveChanges();
+
+                MessageBox.Show("Ticket is sole !");
 
             });
 

@@ -102,16 +102,16 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Mã tuyến" Binding="{Binding RailwayID}"/>
                         <DataGridTextColumn Header="Mã vé" Binding="{Binding Id}"/>
-                        <DataGridTextColumn Header="Ga đi" Binding="{Binding RailWay.DepartureID}"/>
-                        <DataGridTextColumn Header="Ga đến" Binding="{Binding RailWay.DestinationID}"/>
+                        <DataGridTextColumn Header="Ga đi" Binding="{Binding RailWay.DepartureID, Mode=OneTime}"/>
+                        <DataGridTextColumn Header="Ga đến" Binding="{Binding RailWay.DestinationID, Mode=OneTime}"/>
                         <DataGridTextColumn Header="Ngày đi" Binding="{Binding DepartDate}"/>
                         <DataGridTextColumn Header="Giờ đi" Binding="{Binding DepartHour}"/>
-                        <DataGridTextColumn Header="Giá vé" Binding="{Binding RailWay.Price}"/>
+                        <DataGridTextColumn Header="Giá vé" Binding="{Binding RailWay.Price, Mode=OneTime}"/>
                     </DataGrid.Columns>
 
                 </DataGrid>
                 <Grid Grid.Column="1">
-                    <Button Content="Save"    FontSize="20"  Command="{Binding Savebtn}" VerticalAlignment="Top"  Margin="65,10,64.6,0"  Height="76" />
+                    <Button Content="Sell"    FontSize="20"  Command="{Binding Savebtn}" VerticalAlignment="Top"  Margin="65,10,64.6,0"  Height="76" />
                     <Button Content="Month"   FontSize="20" Click="Button_Click"         VerticalAlignment="Top"  Margin="65,116,64.6,0" Height="76"/>
                     <Button Content="Sold"    FontSize="20" Click="Button_Click_1"       VerticalAlignment="Top"  Margin="65,227,64.6,0" Height="76" />
                     <Button Content="Station" FontSize="20" Click="Button_Click_2"       VerticalAlignment="Top"  Margin="65,336,64.6,0" Height="76"  />
