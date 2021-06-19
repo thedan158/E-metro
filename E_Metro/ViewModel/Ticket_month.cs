@@ -77,15 +77,7 @@ namespace E_Metro.ViewModel
 
             }, (p) =>
             {
-                decimal?[] tam = DataProvider.Ins.DB.RailWays.Where(x => x.Id == RId).Select(x => x.Price).ToArray();
-
-                RPrice = tam[0] * 20;
-
-                Console.WriteLine("gia " + tam[0]);
-
-               
-               
-
+                                             
             });
             Savebtn = new RelayCommand<object>((p) =>
             {
@@ -103,6 +95,11 @@ namespace E_Metro.ViewModel
 
             }, (p) =>
             {
+                decimal?[] tam = DataProvider.Ins.DB.RailWays.Where(x => x.Id == RId).Select(x => x.Price).ToArray();
+
+                RPrice = tam[0] * 20;
+
+                Console.WriteLine("gia " + tam[0]);
 
                 var month = new MonthlyTicket()
                 {
