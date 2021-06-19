@@ -9,10 +9,11 @@
 
 namespace E_Metro.Model
 {
+    using E_Metro.ViewModel;
     using System;
     using System.Collections.Generic;
     
-    public partial class Company
+    public partial class Company : BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Company()
@@ -22,11 +23,15 @@ namespace E_Metro.Model
         }
     
         public int Id { get; set; }
-        public string DisplayName { get; set; }
-        public string Website { get; set; }
-        public string Address { get; set; }
-        public string Phone { get; set; }
-    
+        private string _DisplayName;
+        public string DisplayName { get => _DisplayName; set { _DisplayName = value; OnPropertyChanged(); } }
+        private string _Website;
+        public string Website { get => _Website; set { _Website = value; OnPropertyChanged(); } }
+        private string _Address;
+        public string Address { get => _Address; set { _Address = value; OnPropertyChanged(); } }
+        private string _Phone;
+        public string Phone { get => _Phone; set { _Phone = value; OnPropertyChanged(); } }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RailWay> RailWays { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
