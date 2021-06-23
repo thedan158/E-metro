@@ -67,13 +67,17 @@
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
                                 <TextBlock 
-                                    Text="Thêm mới" 
+                                    Text="Add" 
                                     HorizontalAlignment="Center" >
                                 </TextBlock>
                             </Grid>
                             <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="17*"/>
+                                    <ColumnDefinition Width="12*"/>
+                                </Grid.ColumnDefinitions>
                                 <materialDesign:PackIcon Kind="Plus" 
-                                 HorizontalAlignment="Center" />
+                                 HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="21,0,20.6,0" />
                             </Grid>
                         </Grid>
 
@@ -87,7 +91,7 @@
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
                                 <TextBlock 
-                                    Text="Chỉnh sửa" 
+                                    Text="Update" 
                                     HorizontalAlignment="Center" >
                                 </TextBlock>
                             </Grid>
@@ -98,7 +102,7 @@
                         </Grid>
 
                     </Button>
-                    
+
 
                 </Grid>
             </Grid>
@@ -117,31 +121,31 @@
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn
-                                Header="MÃ TUYẾN"
+                                Header="Railway IDs"
                                 DisplayMemberBinding="{Binding Id}">
 
                                 </GridViewColumn>
 
                                 <GridViewColumn
-                                Header="TÊN TUYẾN"
+                                Header="Railway Names"
                                 DisplayMemberBinding="{Binding DisplayName}">
 
                                 </GridViewColumn>
 
                                 <GridViewColumn
-                                Header="ID GA ĐẾN"
+                                Header="A Station ID"
                                 DisplayMemberBinding="{Binding DestinationID}">
 
                                 </GridViewColumn>
 
                                 <GridViewColumn
-                                Header="ID GA ĐI"
+                                Header="D Station ID"
                                 DisplayMemberBinding="{Binding DepartureID}">
 
                                 </GridViewColumn>
 
                                 <GridViewColumn
-                                Header="GIÁ"
+                                Header="Price"
                                 DisplayMemberBinding="{Binding Price}">
 
                                 </GridViewColumn>
@@ -159,7 +163,7 @@
                         </Grid.RowDefinitions>
 
                         <Grid Grid.Row="0">
-                            <TextBlock Text="Danh sách ga"
+                            <TextBlock Text="Station List"
                                    FontSize="15"
                                    TextAlignment="Center">
                             </TextBlock>
@@ -175,7 +179,7 @@
                                         </GridViewColumn>
 
                                         <GridViewColumn
-                                            Header="TÊN"
+                                            Header="Name"
                                             DisplayMemberBinding="{Binding DisplayName}">
                                         </GridViewColumn>
                                     </GridView>

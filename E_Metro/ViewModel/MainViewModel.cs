@@ -68,7 +68,7 @@ namespace E_Metro.ViewModel
                 if (permission == true)
                 {
                     Banve wd = new Banve(); wd.Show();
-                    Sold wd1 = new Sold(); wd1.Show();
+                    Sold wd1 = new Sold(); wd1.Show(); wd1.Close();
                 }
                 else
                 {

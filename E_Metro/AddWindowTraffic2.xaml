@@ -49,7 +49,7 @@
                 <Grid Grid.Column="0">
                     <Grid>
                         <TextBox Text="{Binding DisplayName}"
-                        materialDesign:HintAssist.Hint="Tên Ga"
+                        materialDesign:HintAssist.Hint="Station Name"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center"
                             Margin="37,10,37.8,5.8"/>
@@ -58,7 +58,7 @@
 
                 <Grid Grid.Column="1">
                     <TextBox Text="{Binding Status}"
-                        materialDesign:HintAssist.Hint="Tình trạng hoạt động"
+                        materialDesign:HintAssist.Hint="Current Status"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center" 
                         Margin="37,10,37.8,5.8"/>
@@ -74,7 +74,7 @@
 
                 <Grid Grid.Column="0">
                     <TextBox Text="{Binding Address}"
-                        materialDesign:HintAssist.Hint="Địa Chỉ Ga"
+                        materialDesign:HintAssist.Hint="Station Address"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                         VerticalAlignment="Center" 
                         Margin="37,10,37.8,5.8"/>

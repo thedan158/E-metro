@@ -30,8 +30,16 @@ namespace E_Metro
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            SearchWindow wd = new SearchWindow();
-            wd.ShowDialog();
+            code = LoginViewModel.idR;
+            if (code == 1)
+            {
+                MessageBox.Show("You are not authorized !");
+            }
+            else
+            {
+                SearchWindow wd = new SearchWindow();
+                wd.ShowDialog();
+            }
         }
 
        
