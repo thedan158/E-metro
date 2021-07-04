@@ -39,7 +39,7 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
-                        <TextBlock Text="Thông Tin Ga" FontSize="40" TextAlignment="Center">
+                        <TextBlock Text="Station Information" FontSize="40" TextAlignment="Center">
 
                         </TextBlock>
                     </Grid>

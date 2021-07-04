@@ -42,85 +42,90 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            
 
-                <Grid HorizontalAlignment="Stretch"  Background="Transparent" VerticalAlignment="Stretch">
-                    <Grid.Resources>
-                        <Style TargetType="Button">
-                            <Setter Property="Margin" Value="2 4 2 4"></Setter>
-                            <Setter Property="Width" Value="40"></Setter>
-                        </Style>
-                    </Grid.Resources>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
+            <Grid HorizontalAlignment="Stretch"  Background="Transparent" VerticalAlignment="Stretch">
+                <Grid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="2 4 2 4"></Setter>
+                        <Setter Property="Width" Value="40"></Setter>
+                    </Style>
+                </Grid.Resources>
 
-                <Button Grid.Column="0" Command="{Binding CompanyWindowCommand}" Height="60" Width="160" Margin="10">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <TextBlock 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Command="{Binding CompanyWindowCommand}" Height="60" Width="150" Margin="14,202,10.4,201.2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <TextBlock 
                                     Text="COMPANY" 
                                     HorizontalAlignment="Center" >
-                                </TextBlock>
-                            </Grid>
-                            <Grid Grid.Row="1">
-                                <materialDesign:PackIcon Kind="Domain" 
-                                 HorizontalAlignment="Center" />
-                            </Grid>
+                            </TextBlock>
                         </Grid>
+                        <Grid Grid.Row="1">
+                            <materialDesign:PackIcon Kind="Domain" 
+                                 HorizontalAlignment="Center" />
+                        </Grid>
+                    </Grid>
 
-                    </Button>
-                    <Button Grid.Column="1" Command="{Binding TrafficWindowCommand}" Height="60" Width="160" Margin="10">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <TextBlock 
+                </Button>
+                <Button Grid.Column="1" Command="{Binding TrafficWindowCommand}" Height="60" Width="150" Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <TextBlock 
                                     Text="TRAFFIC" 
                                     HorizontalAlignment="Center" >
-                                </TextBlock>
-                            </Grid>
-                            <Grid Grid.Row="1">
-                                <materialDesign:PackIcon Kind="Train" 
-                                 HorizontalAlignment="Center" />
-                            </Grid>
+                            </TextBlock>
                         </Grid>
+                        <Grid Grid.Row="1">
+                            <materialDesign:PackIcon Kind="Train" 
+                                 HorizontalAlignment="Center" />
+                        </Grid>
+                    </Grid>
 
-                    </Button>
-                    <Button Grid.Column="2" Command="{Binding TicketWindowCommand}" Height="60" Width="160" Margin="10">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <TextBlock 
+                </Button>
+                <Button Grid.Column="2" Command="{Binding TicketWindowCommand}" Height="60" Width="150" Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <TextBlock 
                                     Text="TICKET" 
                                     HorizontalAlignment="Center" >
-                                </TextBlock>
-                            </Grid>
-                            <Grid Grid.Row="1">
-                                <materialDesign:PackIcon Kind="Ticket" 
-                                 HorizontalAlignment="Center" />
-                            </Grid>
+                            </TextBlock>
                         </Grid>
+                        <Grid Grid.Row="1">
+                            <materialDesign:PackIcon Kind="Ticket" 
+                                 HorizontalAlignment="Center" />
+                        </Grid>
+                    </Grid>
 
-                    </Button>
+                </Button>
+                <TextBlock Grid.Column="1" Margin="0,79,12.6,0" FontSize="30" FontWeight="DemiBold" Text="WELCOME" VerticalAlignment="Top" HorizontalAlignment="Right" TextAlignment="Center"                       
+                           Width="153" Height="50"/>
+                <TextBlock HorizontalAlignment="Left" Margin="14,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="169" Width="150"><Run Text="- Access &amp; Update :"/><LineBreak/><Run/><LineBreak/><Run Text="       + Railway Info"/><LineBreak/><Run/><LineBreak/><LineBreak/><Run Text="      "/></TextBlock>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="12.6,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="169" Width="150"><Run Text="- Access &amp; Update :"/><LineBreak/><Run Text="      "/><LineBreak/><Run Text="       + Company Info"/><LineBreak/><Run/><LineBreak/><Run Text="       + Station Info&#x9;"/></TextBlock>
+                <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="12.4,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="169" Width="150"><Run Text="- Access &amp; Update :"/><LineBreak/><Run Text="     "/><LineBreak/><Run Text="       + Standard Ticket List "/><LineBreak/><Run/><LineBreak/><Run Text="       + Monthly Ticket List"/><LineBreak/><Run/><LineBreak/><Run Text="       + Client's Info"/><LineBreak/><Run/><LineBreak/><Run Text="       + Sold Ticket"/><LineBreak/><Run/><LineBreak/></TextBlock>
 
-                
+
             </Grid>
 
-            
-           
+
+
         </Grid>
     </Grid>
 

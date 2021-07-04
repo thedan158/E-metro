@@ -29,6 +29,9 @@ namespace E_Metro
 
         }
 
-        
+        private void RailWayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
